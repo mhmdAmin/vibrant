@@ -1,1 +1,7 @@
- 
+ /*import Helpers*/
+
+ @import '1-helpers/_variables.scss';
+ /*import Layouts */
+
+ @import '3-layout/_navbar.scss';
+ @import '3-layout/_header.scss';

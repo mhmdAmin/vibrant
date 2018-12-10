@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAC,kBAAkB;AAGlB,mBAAmB;ACHpB,UAAW;EACP,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,IAAI;;ACFhB,YAAa;EACT,MAAM,EAAE,KAAK;EACb,WAAW,EAAE,IAAI;EACjB,gBAAgB,EAAE,wCAAwC",
+"sources": ["../scss/main.scss","../scss/3-layout/_navbar.scss","../scss/3-layout/_header.scss"],
 "names": [],
 "file": "main.css"
 }

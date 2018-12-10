@@ -1,3 +1,12 @@
+/*import Helpers*/
+/*import Layouts */
+.ma-navbar {
+  max-height: 80px;
+  height: 80px; }
 
+.page-header {
+  height: 100vh;
+  padding-top: 80px;
+  background-image: linear-gradient(45deg, #996dec, #ac237e); }
 
 /*# sourceMappingURL=main.css.map */
