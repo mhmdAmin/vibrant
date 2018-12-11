@@ -1,5 +1,29 @@
 .page-header {
     height: 100vh;
-    padding-top: 80px;
-    background-image: linear-gradient(45deg, #996dec, #ac237e);
+    padding: 120px 0;
+    background-image: $ma-gradient-color-1; //gradients fallback for old browsers 
+    background-image: linear-gradient(90deg, $ma-gradient-color-1, $ma-gradient-color-2);
+    .header-title {
+        color: $ma-white-color;
+        font-weight: 700;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        @media (max-width: 991px) {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+    .header-subtitle {
+        color: $ma-gray-color;
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        @media (max-width: 991px) {}
+    }
+    .cta-links {
+        padding: 1rem 0;
+    }
+    @media (max-width: 991px) {
+        height: auto;
+    }
 }

@@ -1,4 +1,27 @@
 .ma-navbar {
     max-height: 80px;
     height: 80px;
+    background-image: $ma-gradient-color-1; //gradients fallback for old browsers 
+    // background-image: linear-gradient(90deg, $ma-accent-color, $ma-gradient-color-2); //W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+    background-image: linear-gradient(90deg, $ma-gradient-color-1, $ma-gradient-color-2); //W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+    .navbar-brand {
+        color: $ma-white-color !important;
+    }
+    .nav-item {
+        margin-right: 2rem;
+    }
+    .nav-link {
+        color: $ma-white-color !important;
+        transition: all .3s;
+        &:hover {
+            color: $ma-accent-color !important;
+        }
+    }
+    @media (max-width:991px) {
+        max-height: none;
+        height: auto;
+        background-color: $ma-main-color;
+        padding: 1rem;
+        box-shadow: 0 5px 30px $ma-main-color;
+    }
 }
