@@ -8,7 +8,7 @@
         color: $ma-white-color !important;
     }
     .nav-item {
-        margin-right: 2rem;
+        margin-#{$end-direction}: 2rem;
     }
     .nav-link {
         color: $ma-white-color !important;
