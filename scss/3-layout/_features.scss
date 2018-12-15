@@ -1,0 +1,34 @@
+.features {
+    .feature-box {
+        text-align: center;
+        padding: 4rem 2rem;
+        border-radius: 1rem;
+        box-shadow: 1px (3px*$y-axe-direction) 20px $ma-grey-color;
+        margin-bottom: 3rem;
+        transition: all .5s ease-in-out;
+        &:hover {
+            transform: translateY(-10px);
+            .feat-icon {
+                opacity: 1;
+            }
+        }
+    }
+    .feat-icon {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+        opacity: .65;
+        transition: all .5s ease-in-out;
+        @include linear-gradient-text();
+    }
+    .feat-title {
+        margin-bottom: 1rem;
+        text-transform: capitalize;
+        @include linear-gradient-text();
+    }
+    .feat-text {
+        line-height: 1.8;
+        color: $ma-dark-grey-color;
+        font-weight: $font-w-medium;
+        letter-spacing: .9px;
+    }
+}

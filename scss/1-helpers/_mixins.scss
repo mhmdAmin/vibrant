@@ -1,3 +1,18 @@
 @mixin linear-gradient-bg() {
     background-image: linear-gradient(45deg, $ma-accent-color, $ma-gradient-color-1);
 }
+
+@mixin linear-gradient-text() {
+    background-image: linear-gradient(45deg, $ma-accent-color, $ma-gradient-color-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin add-line() {
+    display: block;
+    width: 75px;
+    height: 4px;
+    border-radius: 0 5px;
+    margin: 0 auto;
+    @include linear-gradient-bg();
+}

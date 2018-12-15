@@ -4,3 +4,24 @@ body {
     direction: $direction;
     text-align: $start-direction;
 }
+
+.mega-section {
+    padding: 120px 0;
+}
+
+.section-heading {
+    margin-bottom: 3rem;
+    &:after {
+        content: '';
+        @include add-line();
+    }
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.25rem;
+}
+
+.text-gradient-color {
+    @include linear-gradient-text();
+}

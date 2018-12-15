@@ -20,7 +20,7 @@
                 display: block;
                 width: 100%;
                 height: 2px;
-                background-color: $ma-accent-color;
+                background-color: $ma-white-color;
                 &:not(:last-child) {
                     margin-bottom: 5px;
                 }
@@ -39,7 +39,7 @@
     .nav-link {
         color: $ma-white-color !important;
         font-weight: $font-w-thin;
-        transition: all .3s;
+        transition: all .5s ease-in-out;
         &:hover {
             color: $ma-accent-color !important;
         }
