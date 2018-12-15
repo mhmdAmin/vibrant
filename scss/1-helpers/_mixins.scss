@@ -1,0 +1,3 @@
+@mixin linear-gradient-bg() {
+    background-image: linear-gradient(45deg, $ma-accent-color, $ma-gradient-color-1);
+}

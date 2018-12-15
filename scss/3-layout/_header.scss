@@ -1,11 +1,12 @@
 .page-header {
     height: 100vh;
     padding: 120px 0;
-    background-image: $ma-gradient-color-1; //gradients fallback for old browsers 
-    background-image: linear-gradient(90deg, $ma-gradient-color-1, $ma-gradient-color-2);
+    background-color: $ma-gradient-color-1; //gradients fallback for old browsers 
+    // background-image: linear-gradient(110deg, $ma-accent-color 50%, $ma-gradient-color-1, $ma-gradient-color-2 30%);
+    @include linear-gradient-bg();
     .header-title {
         color: $ma-white-color;
-        font-weight: 700;
+        font-weight: $font-w-medium;
         font-size: 3rem;
         margin-bottom: 1rem;
         @media (max-width: 991px) {
@@ -16,11 +17,11 @@
     .header-subtitle {
         color: $ma-gray-color;
         font-size: 1.25rem;
-        font-weight: 500;
+        font-weight: $font-w-thin;
         margin-bottom: 1rem;
         @media (max-width: 991px) {}
     }
-    .cta-links {
+    .cta-links-area {
         padding: 1rem 0;
     }
     @media (max-width: 991px) {

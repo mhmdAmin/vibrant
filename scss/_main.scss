@@ -1,10 +1,11 @@
  /*import Helpers*/
 
  @import '1-helpers/_variables.scss';
+ @import '1-helpers/_mixins.scss';
  @import '1-helpers/_globals.scss';
  /*import components*/
 
- @import '2-components/_links.scss';
+ @import '2-components/_ma-btns.scss';
  /*import Layouts */
 
  @import '3-layout/_navbar.scss';
