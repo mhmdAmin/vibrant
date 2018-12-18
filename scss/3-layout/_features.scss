@@ -1,28 +1,56 @@
+/*===== Start features Section Rules =====*/
+
 .features {
     .feature-box {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
         text-align: center;
         padding: 4rem 2rem;
         border-radius: 1rem;
         box-shadow: 1px (3px*$y-axe-direction) 20px $ma-grey-color;
         margin-bottom: 3rem;
         transition: all .5s ease-in-out;
+        &:before {
+            //to add custom overlay over the .feature-box
+            content: '';
+            border-radius: 50%;
+            transform: scale(0);
+            transform-origin: center;
+            transition: all .5s ease-in-out;
+            @include add-overlay(); // to add the strucure of the overlay
+            @include linear-gradient-bg(); // to add the Backgroung-color of the overlay
+        }
         &:hover {
             transform: translateY(-10px);
+            &:before {
+                transform: scale(2);
+            }
             .feat-icon {
                 opacity: 1;
+                color: $ma-white-color;
+                -webkit-text-fill-color: $ma-white-color;
+            }
+            .feat-title {
+                opacity: 1;
+                -webkit-text-fill-color: $ma-white-color;
+            }
+            .feat-text {
+                color: $ma-white-color;
+                background-image: none;
             }
         }
     }
     .feat-icon {
         font-size: 4rem;
-        margin-bottom: 1.5rem;
-        opacity: .65;
+        margin-bottom: 1.5rem; // opacity: .65;
         transition: all .5s ease-in-out;
         @include linear-gradient-text();
     }
     .feat-title {
         margin-bottom: 1rem;
-        text-transform: capitalize;
+        text-transform: capitalize; // opacity: .65;
+        transition: all .5s ease-in-out;
         @include linear-gradient-text();
     }
     .feat-text {
@@ -30,5 +58,14 @@
         color: $ma-dark-grey-color;
         font-weight: $font-w-medium;
         letter-spacing: .9px;
+        transition: all .5s ease-in-out;
+    }
+    .feat-cta-area {
+        text-align: center;
+        .ma-btn {
+            margin-bottom: 0;
+        }
     }
 }
+
+/*===== End features Section Rules =====*/

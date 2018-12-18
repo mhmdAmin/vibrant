@@ -1,5 +1,4 @@
-/*colors varibales*/
-
+//colors varibales
 $ma-main-color :#2B32B2;
 $ma-accent-color :rgb(255, 0, 212);
 $ma-white-color:#fff;
@@ -7,8 +6,11 @@ $ma-grey-color:#e0e4e8;
 $ma-dark-grey-color:#777;
 $ma-gradient-color-1:#1488CC;
 $ma-gradient-color-2: #2B32B2;
-/*font varibales*/
-
+$transparent-black-50:rgba(0, 0, 0, .5);
+$transparent:rgba(0, 0, 0, 0);
+//
+//font varibales
+//
 $font-w-bold:600;
 $font-w-medium:500;
 $font-w-thin:400;

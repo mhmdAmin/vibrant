@@ -1,25 +1,30 @@
 .ma-btn {
+    // global rules for any btn link
     display: inline-block;
     text-decoration: none;
     text-align: center;
     text-transform: capitalize;
-    padding: .75rem 1.25rem; // border: 1px solid;
+    padding: .75rem 1.5rem; // border: 1px solid;
     border-radius: .25rem;
     margin-bottom: 1.25rem;
-    width: 100%;
-    box-shadow: 0 (3px * $y-axe-direction) 30px rgba(0, 0, 0, .5);
+    width: auto;
+    box-shadow: 0 (3px * $y-axe-direction) 30px $transparent-black-50;
     transition: all .5s ease-in-out;
+    cursor: pointer;
     &:hover {
         text-decoration: none;
         transform: translateY(-3px);
-        box-shadow: 0 (8px * $y-axe-direction) 30px rgba(0, 0, 0, .5);
+        box-shadow: 0 (8px * $y-axe-direction) 30px $transparent-black-50;
     }
 }
 
 .ma-btn-primary {
     color: $ma-white-color !important;
-    background-color: $ma-accent-color; // @include linear-gradient-bg();
+    background-color: $ma-accent-color;
     border-color: $ma-accent-color;
+    &:hover {
+        background: $ma-gradient-color-2;
+    }
 }
 
 .ma-btn-secondary {

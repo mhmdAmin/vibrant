@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- ====== Font Awesome LIb ====== -->
     <link rel="stylesheet" href="css/all.min.css">
+    <!-- <link rel="stylesheet" href="styles/css/libs/jquery.fancybox.min.css"> -->
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
     <!-- ====== Custom styles ====== -->
     <link rel="stylesheet" href="css/main-LTR.css">
 
@@ -71,6 +73,7 @@
         <div class="container">
             <div class="row d-flex align-items-center text-center text-lg-left">
                 <div class="col-12 col-lg-6 text-center text-lg-left">
+                    <!-- Start of .header-text-area -->
                     <div class="header-text-area">
                         <h1 class=" text-capitalize header-title">Welcome to our compnany web site</h1>
                         <p class="header-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed
@@ -85,18 +88,19 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    <!-- Start of .header-text-area -->
 
+                </div>
+                <!-- Start of header-image -->
                 <div class="col-12 col-lg-6">
                     <div class="header-img-area">
                         <img src="assets/header-img.svg" alt="" class="img-fluid">
                     </div>
                 </div>
-            </div>
+                <!-- End of header-image -->
 
-
-
-
+            </div> <!-- End Of .row -->
+        </div><!-- End Of .container -->
     </header>
     <!-- ====== End  Page Header ====== -->
 
@@ -109,15 +113,14 @@
         <div class="container">
             <div class="section-heading">
                 <h2 class="section-title text-capitalize text-gradient-color">awesome features</h2>
+                <div class="line-gradient-color"></div>
             </div>
 
-
             <div class="row">
-
+                <!-- ======  Start First feature box ======  -->
                 <div class="col-12 col-lg-4">
 
                     <div class="feature-box  ">
-
                         <i class="fas fa-drafting-compass feat-icon "></i>
                         <h3 class="feat-title">feature 1</h3>
                         <p class="feat-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempore
@@ -126,10 +129,12 @@
                     </div>
 
                 </div>
+                <!-- ======  End First feature box ======  -->
+
+                <!-- ======  Start Second feature box ======  -->
                 <div class="col-12 col-lg-4">
 
                     <div class="feature-box text-center">
-
                         <i class="fas fa-crown feat-icon"></i>
                         <h3 class="feat-title">feature 1</h3>
                         <p class="feat-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempore
@@ -138,6 +143,10 @@
                     </div>
 
                 </div>
+                <!-- ======  End Second feature box ======  -->
+
+
+                <!-- ======  Start Third feature box ======  -->
                 <div class="col-12 col-lg-4">
 
                     <div class="feature-box text-center">
@@ -149,14 +158,19 @@
                     </div>
 
                 </div>
-                <div class="col-12 col-sm-6 col-lg-3 mx-auto feat-cta-area">
-                    <a href="#0" class="ma-btn ma-btn-primary ">see all features</a>
-                </div>
 
+                <!-- ======  End Third feature box ======  -->
+
+
+
+
+            </div> <!-- End Of .row -->
+            <!-- ======  Start .feat-cta-area ======  -->
+            <div class=" feat-cta-area">
+                <a href="#0" class="ma-btn ma-btn-primary ">see all features</a>
             </div>
-
-
-        </div>
+            <!-- ======  End .feat-cta-area ======  -->
+        </div><!-- End Of .container -->
     </section>
 
 
@@ -164,10 +178,261 @@
 
 
 
+    <!-- Start .info-in-numbers section -->
+    <section class="info-in-numbers elf-section">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="section-heading ">
+                <h2 class="section-title text-capitalize ">numbers talking about us</h2>
+                <div class="line-solid-color"></div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="info-box">
+                        <i class="fas fa-globe"></i>
+                        <h3 class="info-number">5000</h3>
+                        <h5 class="info-decs">Info 1</h5>
+                    </div>
+
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="info-box">
+                        <i class="fas fa-globe"></i>
+                        <h3 class="info-number">5000</h3>
+                        <h5 class="info-decs">Info 2</h5>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="info-box">
+                        <i class="fas fa-globe"></i>
+                        <h3 class="info-number">5000</h3>
+                        <h5 class="info-decs">Info 3</h5>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="info-box">
+                        <i class="fas fa-globe"></i>
+                        <h3 class="info-number">5000</h3>
+                        <h5 class="info-decs">Info 3</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== End Of .row ==== -->
+
+
+
+        </div>
+        <!-- ===== End Of .container ==== -->
+
+
+
+    </section>
+    <!-- End .info-in-numbers section -->
+
+
+
+    <!-- Start our-vision section -->
+    <section class="our-vision mega-section d-flex align-items-center">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex align-items-center">
+                    <div class="vision-image">
+                        <img src="assets/vision-image.svg" alt="Our vision" class="img-fluid">
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 offset-md-1 d-flex align-items-center">
+                    <div class="vision-text ">
+                        <i class="fas fa-lightbulb  vision-icon"></i>
+                        <span>vision that move us fowrard</span>
+                        <h3>our great vision in few words</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, aliquam est!
+                            Repellendus tenetur officia excepturi dolorum totam sunt accusamus quia fugiat quasi dolor
+                            perferendis at praesentium ex, nulla consectetur delectus?</p>
+                        <a href="#0" class="ma-btn ma-btn-primary">read more</a>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End our-vision section -->
+
+    <!-- Start our-mission section -->
+    <section class="our-mission mega-section d-flex align-items-center">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-12 col-md-6 d-flex align-items-center">
+                    <div class="mission-text ">
+                        <i class="fas fa-chart-line mission-icon"></i>
+                        <span>vision that move us fowrard</span>
+                        <h3>our great mission in few words</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, aliquam est!
+                            Repellendus tenetur officia excepturi dolorum totam sunt accusamus quia fugiat quasi dolor
+                            perferendis at praesentium ex, nulla consectetur delectus?</p>
+                        <a href="#0" class="ma-btn ma-btn-primary">read more</a>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 offset-md-1 d-flex align-items-center">
+                    <div class="mission-image">
+                        <img src="assets/mission-image.svg" alt="Our mission" class="img-fluid">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End our-mission section -->
+
+
+    <!-- Start our-video section -->
+    <section class="our-video elf-section d-flex align-items-center justify-content-center">
+        <div class="overlay"></div>
+
+        <div class="play-btn">
+            <a href="#0" class="video-link"><img src="assets/icons/play-icon.svg" alt="" class="img-fluid play-icon"></a>
+        </div>
+
+
+    </section>
+    <!-- End our-video section -->
+
+
+
+    <!-- Start gallery section  -->
+    <section class="gallery mega-section d-flex align-items-center ma-bg-extra-light-color ">
+        <div class="no-container  ">
+            <div class="gallery-wraper ">
+
+                <div class="section-heading">
+                    <h2 class="section-title text-capitalize text-gradient-color">a gallery of our work</h2>
+                    <div class="line-gradient-color"></div>
+                </div>
+
+
+                <!-- 
+                      when you want to add a new photo please be sure of that:
+                        1- add an <li> item in same structure below inside the to the .filter-btn-list ul
+                        2- add the photo in the same strcture below inside the .filter-group div.
+                        3- set the data-target value in the <li> item to the same class-name you will give to the <img> item you will add PREFIXED by dot symbol [.] 
+                    -->
+                <div class="filter ">
+                    <div class="filter-wraper ">
+                        <!-- a menu of links to show the photos users needs -->
+                        <!-- <ul class="filter-btn-list list-unstyled d-flex flex-wrap justify-content-start justify-content-md-between
+                                text-capitalize "> -->
+                        <ul class="filter-btn-list list-unstyled d-flex flex-wrap justify-content-center text-capitalize ">
+                            <li class="filter-btn active " data-target=".all">all</li>
+                            <li class="filter-btn " data-target=".programming">programming</li>
+                            <li class="filter-btn " data-target=".consulting">consulting</li>
+                            <li class="filter-btn " data-target=".mobile">mobile apps</li>
+                            <li class="filter-btn " data-target=".blog">blog</li>
+                            <li class="filter-btn " data-target=".marketing">marketing</li>
+                        </ul>
+
+                        <!-- the photos that will be filtered by the user you can add much more photo
+                                 [be sure when adding a new photo to give it a class name that suits the group will photo group {like 'programming' 'colors' 'drinks' in example below} ] -->
+                        <div class="filter-group  ">
+                            <div class="row no-gutters ">
+                                <div class="col-12  col-sm-6 col-md-4  col-lg-3 gallery-item ">
+                                    <a href="assets/gallery/1.jpg" data-fancybox=".filter" class="pic-link programming enabled-img ">
+                                        <img src="assets/gallery/1.jpg" alt=" " class="img-fluid ">
+                                    </a>
+                                    <div class="hidden-info ">
+                                        <a href="# " class="info-link text-capitalize ">programming</a>
+                                        <span class="text-capitalize ">london</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4   col-lg-3 gallery-item ">
+                                    <a href="assets/gallery/2.jpg" data-fancybox=".filter" class="pic-link blog enabled-img ">
+                                        <img src="assets/gallery/2.jpg" alt=" " class="img-fluid ">
+                                    </a>
+                                    <div class="hidden-info ">
+                                        <a href="# " class="info-link text-capitalize ">blog</a>
+                                        <span class="text-capitalize ">rome</span>
+                                    </div>
+                                </div>
+                                <div class="col-12  col-sm-6 col-md-4  col-lg-3 gallery-item ">
+                                    <a href="assets/gallery/3.jpg" data-fancybox=".filter" class="pic-link programming enabled-img ">
+                                        <img src="assets/gallery/3.jpg" alt=" " class="img-fluid ">
+                                    </a>
+                                    <div class="hidden-info ">
+                                        <a href="# " class="info-link text-capitalize ">programming</a>
+                                        <span class="text-capitalize ">moscow</span>
+                                    </div>
+                                </div>
+                                <div class="col-12  col-sm-6 col-md-4  col-lg-3 gallery-item ">
+                                    <a href="assets/gallery/4.jpg" data-fancybox=".filter" class="pic-link consulting enabled-img ">
+                                        <img src="assets/gallery/4.jpg" alt=" " class="img-fluid ">
+                                    </a>
+                                    <div class="hidden-info gallery-item ">
+                                        <a href="# " class="info-link text-capitalize ">consulting</a>
+                                        <span class="text-capitalize ">cairo</span>
+                                    </div>
+                                </div>
+                                <div class="col-12  col-sm-6 col-md-4  col-lg-3 gallery-item ">
+                                    <a href="assets/gallery/5.jpg" data-fancybox=".filter" class=" pic-link blog enabled-img ">
+                                        <img src="assets/gallery/5.jpg" alt=" " class="img-fluid ">
+                                    </a>
+                                    <div class="hidden-info ">
+                                        <a href="# " class="info-link text-capitalize ">blog</a>
+                                        <span class="text-capitalize ">india</span>
+                                    </div>
+                                </div>
+                                <div class="col-12  col-sm-6 col-md-4   col-lg-3 gallery-item ">
+                                    <a href="assets/gallery/6.jpg" data-fancybox=".filter" class="pic-link mobile enabled-img ">
+                                        <img src="assets/gallery/6.jpg" alt=" " class="img-fluid ">
+                                    </a>
+                                    <div class="hidden-info ">
+                                        <a href="# " class="info-link text-capitalize ">mobile</a>
+                                        <span class="text-capitalize ">new york</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 gallery-item ">
+                                    <a href="assets/gallery/7.jpg" data-fancybox=".filter" class="pic-link marketing enabled-img ">
+                                        <img src="assets/gallery/7.jpg" alt=" " class="img-fluid ">
+                                    </a>
+                                    <div class="hidden-info ">
+                                        <a href="# " class="info-link text-capitalize ">marketing</a>
+                                        <span class="text-capitalize ">paris</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 gallery-item ">
+                                    <a href="assets/gallery/8.jpg" data-fancybox=".filter" class="pic-link mobile enabled-img ">
+                                        <img src="assets/gallery/8.jpg" alt=" " class="img-fluid ">
+                                    </a>
+                                    <div class="hidden-info ">
+                                        <a href="# " class="info-link text-capitalize ">mobile</a>
+                                        <span class="text-capitalize ">los angeles</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End gallery section  -->
+
+
 
     <!-- jQuery first, then bootstrab.bundle [bootstrab.js + popper.js] JS -->
     <script src="js//vendors/jquery-3.3.1.min.js"></script>
     <script src="js/vendors/bootstrap.bundle.min.js"></script>
+    <script src="js/vendors/jquery.fancybox.min.js"></script>
+
 
     <!-- =======Custom js Plugins====== -->
     <script src="js/plugins.js"></script>

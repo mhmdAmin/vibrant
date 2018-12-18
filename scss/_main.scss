@@ -1,13 +1,21 @@
- /*import Helpers*/
+ /*Start importing global Helpers */
 
  @import '1-helpers/_variables.scss';
  @import '1-helpers/_mixins.scss';
  @import '1-helpers/_globals.scss';
- /*import components*/
+ /*ُEnd importing global Helpers */
+
+ /*Start global components rules */
 
  @import '2-components/_ma-btns.scss';
- /*import Layouts */
+ /*End global components rules */
+
+ /*Start Importing Layouts Rules */
 
  @import '3-layout/_navbar.scss';
  @import '3-layout/_header.scss';
  @import '3-layout/_features.scss';
+ @import '3-layout/_info-in-numbers.scss';
+ @import '3-layout/_our-video.scss';
+ @import '3-layout/_gallery.scss';
+ /*End Importing Layouts Rules */

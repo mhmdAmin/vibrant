@@ -1,27 +1,69 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i, ');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i ');
 body {
     font-family: 'Montserrat', sans-serif;
-    direction: $direction;
-    text-align: $start-direction;
+    direction: $direction; //the direction defined according to the dirction captured from the config-file used in top of the RTL-main.scss OR RTL-main.scss 
+    text-align: $start-direction; //the direction definedleft OR right according to the dirction captured from the config-file used in top of the RTL-main.scss OR RTL-main.scss
 }
 
 .mega-section {
+    // this class adds some global rules to the big sections
     padding: 120px 0;
 }
 
+.elf-section {
+    // this class adds some global rules to the small sections
+    padding: 60px 0;
+}
+
 .section-heading {
+    // This class defines the global rules that used for heading wrapers of any section
     margin-bottom: 3rem;
-    &:after {
-        content: '';
-        @include add-line();
-    }
 }
 
 .section-title {
+    // This class defines the global rules that used for heading elments it self of any section
     text-align: center;
     font-size: 2.25rem;
 }
 
 .text-gradient-color {
+    // this class colors the text of any element used it with linear-gradient colors
     @include linear-gradient-text();
+}
+
+.bg-gradient-color {
+    // this class colors the text of any element used it with linear-gradient colors
+    @include linear-gradient-bg();
+}
+
+.overlay {
+    // this class  works as an transparent overlay
+    @include add-overlay();
+    background-color: $transparent-black-50;
+}
+
+.line-gradient-color {
+    // this class adds a littel line after the element used it
+    @include add-line();
+    @include linear-gradient-bg();
+}
+
+.line-solid-color {
+    // this class adds a littel line after the element used it
+    @include add-line();
+    @include solid-color-bg();
+}
+
+/*  to enable any element that previously had the .disabled-element class.  */
+
+.enabeld-element {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*  to disable any element and prevent the mouse action on it  */
+
+.disabled-element {
+    opacity: .2;
+    pointer-events: none;
 }

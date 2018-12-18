@@ -1,0 +1,28 @@
+/*===== Start info-in-numbers Section Rules =====*/
+
+.info-in-numbers {
+    position: relative;
+    z-index: 0;
+    background-image: url('../../assets/numbers-BG.jpg');
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    .overlay {
+        @include linear-gradient-bg();
+    }
+    .section-heading {
+        .line-solid-color {
+            @include solid-color-bg($ma-white-color);
+        }
+    }
+    .info-box {
+        color: $ma-white-color;
+        text-align: center;
+        margin-bottom: 0;
+        @media (max-width: 991px) {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+/*===== End info-in-numbers Section Rules =====*/
