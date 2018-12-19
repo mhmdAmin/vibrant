@@ -42,30 +42,34 @@
             transition: all .3s ease-in-out;
             &:after {
                 content: '';
-                position: absolute;
-                display: block;
-                #{$start-direction}: 0;
-                top: 0;
-                bottom: 0;
-                #{$end-direction}: 0;
-                transition: background-color .6s ease-in-out;
+                @include add-overlay();
+                @include linear-gradient-bg();
+                transition: all .3s ease-in-out;
+                z-index: 2;
+                opacity: 0;
             }
         }
         .gallery-item {
             position: relative;
+            z-index: 1;
+            .overlay {
+                @include linear-gradient-bg();
+                z-index: 2;
+                opacity: 0;
+            }
             &:hover {
                 .hidden-info {
                     bottom: 20px;
                     opacity: 1;
                 }
-                a.pic-link:after {
-                    background-color: $transparent-black-50;
+                .pic-link:after {
+                    opacity: .5;
                 }
             }
             img {
                 transition: all .3s ease-in-out;
-                width: 500px;
-                height: 300px;
+                width: 400px;
+                height: 250px;
                 min-width: 100%;
             }
             .info-link {
@@ -78,25 +82,9 @@
                 font-size: .85rem;
                 display: block;
             }
-            @media(max-width:991px) {
-                .info-link {
-                    font-size: 1rem;
-                }
-                span {
-                    font-size: .75rem;
-                }
-            }
-            @media(max-width:576px) {
-                .info-link {
-                    font-size: .85rem;
-                }
-                span {
-                    font-size: .65rem;
-                }
-            }
             .hidden-info {
                 position: absolute;
-                #{$start-direction}: 10px;
+                #{$start-direction}: 20px;
                 bottom: 15px;
                 padding: 0;
                 margin: 0;
@@ -106,10 +94,11 @@
                 &>span {
                     color: $ma-white-color;
                 }
-                &>a.info-link {
+                &>.info-link {
                     color: $ma-white-color;
                     &:hover {
-                        color: $ma-main-color;
+                        transform: scale(1.025);
+                        font-weight: $font-w-bold;
                     }
                 }
             }

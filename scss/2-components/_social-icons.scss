@@ -1,0 +1,66 @@
+/* Start Social Icons Styles */
+
+.sc-holder {
+    text-align: center;
+    padding: .75rem 0;
+    .sc-title {
+        display: inline-block;
+        margin-right: 20px;
+        i.fa {
+            margin-right: 5px;
+        }
+    }
+    .sc-list {
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        list-style: none;
+        .sc-item {
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            border-radius: 50%;
+            @include ma-box-shadow( 0, 3, 15, 0, $transparent-black-25);
+            @include linear-gradient-bg();
+            transition: all .3s ease-in-out;
+            &:last-of-type {
+                margin-right: 0;
+            }
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+        .sc-icon {
+            text-align: center;
+            border-radius: 50%;
+            color: $ma-white-color !important;
+            transition: all .3s ease-in-out;
+        }
+    }
+    .sc-size-40 {
+        .sc-icon {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+        }
+    }
+    .sc-size-32 {
+        .sc-icon {
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            font-size: 16px;
+        }
+    }
+    .sc-size-24 {
+        .sc-icon {
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 12px;
+        }
+    }
+}
+
+/*  End Social Icons Styles  */

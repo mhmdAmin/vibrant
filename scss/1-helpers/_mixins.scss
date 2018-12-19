@@ -1,14 +1,14 @@
-@mixin linear-gradient-bg($deg:45, $color-stop-1:$ma-accent-color, $color-stop-2:$ma-gradient-color-1) {
-    // this mixin adds linear-gradient background to the element uses this mixin
-    //Takes 4 args to specify  the direction of the gradient in int numbers, colors of the gradient, opacity of the back ground
-    background-image: -webkit-linear-gradient($deg+deg, $color-stop-1, $color-stop-2);
-}
-
 @mixin linear-gradient-text($deg:45, $color-stop-1:$ma-accent-color, $color-stop-2:$ma-gradient-color-1) {
     // this mixin adds linear-gradient color to the text of the element uses this mixin
     background-image: -webkit-linear-gradient($deg+deg, $color-stop-1, $color-stop-2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@mixin linear-gradient-bg($deg:45, $color-stop-1:$ma-accent-color, $color-stop-2:$ma-gradient-color-1) {
+    // this mixin adds linear-gradient background to the element uses this mixin
+    //Takes 4 args to specify  the direction of the gradient in int numbers, colors of the gradient, opacity of the back ground
+    background-image: -webkit-linear-gradient($deg+deg, $color-stop-1, $color-stop-2);
 }
 
 @mixin solid-color-bg($bg-color:$ma-main-color) {
@@ -31,10 +31,14 @@
 @mixin add-overlay {
     //this mixin makes an overlay layer over the elment uses it
     position: absolute;
-    left: 0;
-    right: 0;
+    #{$start-direction}: 0;
+    #{$end-direction}: 0;
     top: 0;
     bottom: 0;
     z-index: -1;
     display: block;
+}
+
+@mixin ma-box-shadow($x:0, $y:0, $blur:0, $spread:0, $color:#000) {
+    box-shadow: $x+px ($y*$y-axe-direction)+px $blur+px $spread+px $color;
 }

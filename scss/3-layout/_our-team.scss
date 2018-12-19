@@ -1,0 +1,48 @@
+/* ===== Start Our Team Rules ===== */
+
+.our-team {
+    .tm-member-card {
+        position: relative;
+        border-radius: .5rem .5rem 0 0;
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+        padding-bottom: 1rem;
+        @include ma-box-shadow(1, 3, 20, 0, $transparent-black-25);
+        &:hover {
+            @include ma-box-shadow(10, 15, 50, 0, $transparent-black-25);
+            .tm-img::before {
+                opacity: .5;
+            }
+        }
+        .tm-img {
+            position: relative;
+            overflow: hidden;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: all .5s ease-in-out;
+                opacity: 0;
+                @include linear-gradient-bg();
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .tm-details {
+            padding: 1rem;
+            .tm-name {
+                font-size: 1.25rem;
+                font-weight: $font-w-bold;
+            }
+        }
+        @media (max-width: 991px) {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+/* ===== End  Our Team Rules ===== */
