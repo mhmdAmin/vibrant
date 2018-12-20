@@ -811,6 +811,12 @@ body {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 991px) {
+  .pricing .plan {
+    margin-bottom: 3rem;
+  }
+}
+
 /*===== End Pricing section rules =====*/
 /*End Importing Layouts Rules */
 /*# sourceMappingURL=main-RTL.css.map */

@@ -57,6 +57,9 @@
         .plan-cta {
             margin-bottom: 2rem;
         }
+        @media (max-width:991px) {
+            margin-bottom: 3rem;
+        }
     }
 }
 
