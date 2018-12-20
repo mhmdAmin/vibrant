@@ -1,0 +1,63 @@
+/*===== Start Pricing section rules =====*/
+
+.pricing {
+    .plan {
+        overflow: hidden;
+        @include ma-box-shadow(1, 3, 20, 0, $transparent-black-25);
+        border-radius: 1rem 1rem 0 0;
+        .plan-cost {
+            position: relative;
+            padding-top: 2.5rem;
+            padding-bottom: 1rem;
+            .plane-name {
+                color: $ma-white-color;
+                font-weight: $font-w-bold;
+                font-size: 1.75rem;
+            }
+            .plan-price {
+                font-size: 3rem;
+                font-weight: $font-w-bold;
+                color: $ma-white-color;
+                .plan-currency {
+                    position: relative;
+                    color: $ma-white-color;
+                    font-size: 1.5rem;
+                    font-weight: $font-w-thin;
+                    top: -1rem;
+                    #{$start-direction}: -.5rem;
+                    line-height: 0;
+                    vertical-align: baseline;
+                    display: inline-block;
+                }
+            }
+            .plan-desc {
+                display: block;
+                font-size: 1rem;
+                font-weight: $font-w-medium;
+                font-style: italic;
+                color: $ma-white-color;
+            }
+        }
+        .plan-details {
+            padding: 1rem .5rem;
+            .plan-list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                &>li {
+                    padding: .5rem 0;
+                    &>i {
+                        margin-#{$end-direction}: 10px;
+                        font-size: 1rem;
+                        @include linear-gradient-text();
+                    }
+                }
+            }
+        }
+        .plan-cta {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+/*===== End Pricing section rules =====*/

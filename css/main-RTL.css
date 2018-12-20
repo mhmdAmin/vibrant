@@ -9,7 +9,7 @@ body {
 }
 
 .mega-section {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 .elf-section {
@@ -23,6 +23,12 @@ body {
 .section-title {
   text-align: center;
   font-size: 2.25rem;
+}
+
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
 }
 
 .text-gradient-color {
@@ -76,6 +82,10 @@ body {
   pointer-events: none;
 }
 
+.see-more-area {
+  display: block;
+}
+
 /*ُEnd importing global Helpers */
 /*Start global components rules */
 .ma-btn {
@@ -85,7 +95,6 @@ body {
   text-transform: capitalize;
   padding: .75rem 1.5rem;
   border-radius: .25rem;
-  margin-bottom: 1.25rem;
   width: auto;
   -webkit-box-shadow: 0 -3px 30px rgba(0, 0, 0, 0.5);
           box-shadow: 0 -3px 30px rgba(0, 0, 0, 0.5);
@@ -326,6 +335,7 @@ body {
 
 .page-header .cta-links-area .ma-btn {
   width: 100%;
+  margin-bottom: 1.25rem;
 }
 
 @media (max-width: 991px) {
@@ -425,14 +435,6 @@ body {
   transition: all .5s ease-in-out;
 }
 
-.features .feat-cta-area {
-  text-align: center;
-}
-
-.features .feat-cta-area .ma-btn {
-  margin-bottom: 0;
-}
-
 /*===== End features Section Rules =====*/
 /*===== Start info-in-numbers Section Rules =====*/
 .info-in-numbers {
@@ -455,13 +457,7 @@ body {
 .info-in-numbers .info-box {
   color: #fff;
   text-align: center;
-  margin-bottom: 0;
-}
-
-@media (max-width: 991px) {
-  .info-in-numbers .info-box {
-    margin-bottom: 3rem;
-  }
+  margin-bottom: 3rem;
 }
 
 /*===== End info-in-numbers Section Rules =====*/
@@ -537,6 +533,7 @@ body {
 /*==========================    START gallery SECTION  ==========================*/
 .gallery .filter-wraper {
   overflow: hidden;
+  margin-bottom: 3rem;
 }
 
 .gallery .filter-btn-list {
@@ -677,6 +674,7 @@ body {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
   padding-bottom: 1rem;
+  margin-bottom: 3rem;
   -webkit-box-shadow: 1px -3px 20px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 1px -3px 20px 0px rgba(0, 0, 0, 0.25);
 }
@@ -686,16 +684,22 @@ body {
           box-shadow: 10px -15px 50px 0px rgba(0, 0, 0, 0.25);
 }
 
-.our-team .tm-member-card:hover .tm-img::before {
+.our-team .tm-member-card:hover .tm-image::before {
   opacity: .5;
 }
 
-.our-team .tm-member-card .tm-img {
+.our-team .tm-member-card:hover .tm-image .tm-desc {
+  visibility: visible;
+  opacity: 1;
+  bottom: 0;
+}
+
+.our-team .tm-member-card .tm-image {
   position: relative;
   overflow: hidden;
 }
 
-.our-team .tm-member-card .tm-img::before {
+.our-team .tm-member-card .tm-image::before {
   content: '';
   position: absolute;
   top: 0;
@@ -708,8 +712,21 @@ body {
   background-image: -webkit-linear-gradient(45deg, #ff00d4, #1488CC);
 }
 
-.our-team .tm-member-card .tm-img img {
+.our-team .tm-member-card .tm-image img {
   width: 100%;
+}
+
+.our-team .tm-member-card .tm-image .tm-desc {
+  position: absolute;
+  right: 0;
+  bottom: -100%;
+  top: auto;
+  padding: 1rem;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .our-team .tm-member-card .tm-details {
@@ -721,12 +738,79 @@ body {
   font-weight: 600;
 }
 
-@media (max-width: 991px) {
-  .our-team .tm-member-card {
-    margin-bottom: 3rem;
-  }
+/* ===== End  Our Team Rules ===== */
+/*===== Start Pricing section rules =====*/
+.pricing .plan {
+  overflow: hidden;
+  -webkit-box-shadow: 1px -3px 20px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px -3px 20px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 1rem 1rem 0 0;
 }
 
-/* ===== End  Our Team Rules ===== */
+.pricing .plan .plan-cost {
+  position: relative;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.pricing .plan .plan-cost .plane-name {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+
+.pricing .plan .plan-cost .plan-price {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.pricing .plan .plan-cost .plan-price .plan-currency {
+  position: relative;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  top: -1rem;
+  right: -.5rem;
+  line-height: 0;
+  vertical-align: baseline;
+  display: inline-block;
+}
+
+.pricing .plan .plan-cost .plan-desc {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+  color: #fff;
+}
+
+.pricing .plan .plan-details {
+  padding: 1rem .5rem;
+}
+
+.pricing .plan .plan-details .plan-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pricing .plan .plan-details .plan-list > li {
+  padding: .5rem 0;
+}
+
+.pricing .plan .plan-details .plan-list > li > i {
+  margin-left: 10px;
+  font-size: 1rem;
+  background-image: -webkit-linear-gradient(45deg, #ff00d4, #1488CC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pricing .plan .plan-cta {
+  margin-bottom: 2rem;
+}
+
+/*===== End Pricing section rules =====*/
 /*End Importing Layouts Rules */
 /*# sourceMappingURL=main-RTL.css.map */

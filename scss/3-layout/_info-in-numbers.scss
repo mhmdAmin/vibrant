@@ -18,10 +18,7 @@
     .info-box {
         color: $ma-white-color;
         text-align: center;
-        margin-bottom: 0;
-        @media (max-width: 991px) {
-            margin-bottom: 3rem;
-        }
+        margin-bottom: 3rem;
     }
 }
 

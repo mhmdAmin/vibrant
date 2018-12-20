@@ -7,7 +7,7 @@ body {
 
 .mega-section {
     // this class adds some global rules to the big sections
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 .elf-section {
@@ -24,6 +24,9 @@ body {
     // This class defines the global rules that used for heading elments it self of any section
     text-align: center;
     font-size: 2.25rem;
+    @media (max-width: 767px) {
+        font-size: 1.75rem;
+    }
 }
 
 .text-gradient-color {
@@ -66,4 +69,8 @@ body {
 .disabled-element {
     opacity: .2;
     pointer-events: none;
+}
+
+.see-more-area {
+    display: block;
 }
