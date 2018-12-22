@@ -1,6 +1,37 @@
 $(function () {
 
 
+
+    var backToTopButton = $(".back-to-top");
+
+
+
+    //2- Start Smooth Scrolling To Window Top When Clicking on Back To Top Button
+    $(backToTopButton).on("click", function () {
+        $("html,body").animate({
+            scrollTop: 0
+        }, 1000);
+    }); //End Smooth Scrolling To Window Top When Clicking on Back To Top Button
+
+
+
+    $(window).on('scroll', function () {
+
+
+
+        //Start show/hide back to top button
+        if ($(this).scrollTop() > 50) {
+            backToTopButton.fadeIn(600)
+        }
+        else {
+            backToTopButton.fadeOut(600);
+        } //End show/hide back to top button
+    }
+    );
+    /*              End Window scroll functions               */
+
+
+
     // gallery fancy box initializer
     $().fancybox({
         selector: '[data-fancybox=".filter"]:visible', loop: true, buttons: ['zoom', 'close'],

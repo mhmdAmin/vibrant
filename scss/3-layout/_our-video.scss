@@ -6,13 +6,15 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .overlay {
         @include solid-color-bg($ma-main-color);
         opacity: .85;
     }
     .play-btn {
         @include linear-gradient-bg();
-        border: 1px solid linear-gradient-bg();
         border-radius: 50%;
         padding: 5px;
         cursor: pointer;

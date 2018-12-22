@@ -1,0 +1,57 @@
+.contact-us {
+    /*Start user-form Rules*/
+    .user-form {
+        margin-bottom: 3rem;
+        label {
+            margin: 0;
+            font-size: .85rem;
+            font-weight: $font-w-bold;
+            @include solid-color-text($ma-main-color);
+        }
+        input[type=email],
+        input[type=text],
+        input[type=password],
+        textarea {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            outline: none;
+            border: 1px solid;
+            border-radius: .25rem;
+            margin-bottom: .4rem;
+            transition: border-color .3s ease-in-out;
+            border-color: rgba($ma-accent-color, .5);
+            &:focus {
+                border-color: rgba($ma-accent-color, 1);
+            }
+        }
+        textarea {
+            min-height: 7rem;
+            margin-bottom: 1rem;
+        }
+    }
+    /*End user-form Rules*/
+    .contact-info-card {
+        transition: all .3s ease-in-out;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border-radius: .5rem;
+        @include ma-box-shadow(0, 3, 15, 0, $transparent-black-25);
+        .icon {
+            font-size: 1.5rem;
+            margin-#{$end-direction}: .5rem;
+            vertical-align: middle;
+            @include linear-gradient-text();
+        }
+        .info {
+            font-size: .85rem;
+            font-weight: $font-w-bold;
+            text-decoration: none;
+            @include solid-color-text();
+            &:hover {
+                @include linear-gradient-text();
+            }
+        }
+    }
+}

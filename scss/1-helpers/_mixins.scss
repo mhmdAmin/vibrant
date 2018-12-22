@@ -1,11 +1,11 @@
-@mixin linear-gradient-text($deg:45, $color-stop-1:$ma-accent-color, $color-stop-2:$ma-gradient-color-1) {
+@mixin linear-gradient-text($deg:45, $color-stop-1:$ma-accent-color, $color-stop-2:$ma-main-color) {
     // this mixin adds linear-gradient color to the text of the element uses this mixin
     background-image: -webkit-linear-gradient($deg+deg, $color-stop-1, $color-stop-2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-@mixin linear-gradient-bg($deg:45, $color-stop-1:$ma-accent-color, $color-stop-2:$ma-gradient-color-1) {
+@mixin linear-gradient-bg($deg:45, $color-stop-1:$ma-accent-color, $color-stop-2:$ma-main-color) {
     // this mixin adds linear-gradient background to the element uses this mixin
     //Takes 4 args to specify  the direction of the gradient in int numbers, colors of the gradient, opacity of the back ground
     background-image: -webkit-linear-gradient($deg+deg, $color-stop-1, $color-stop-2);
@@ -17,6 +17,14 @@
     //1- For the bg color applied to the line 
     //2- For the opacity applied to the line 
     background-color: $bg-color;
+}
+
+@mixin solid-color-text($text-color:$ma-main-color) {
+    // this mixin adds linear-gradient background to the element uses this mixin 
+    //takes 2 args with default values 
+    //1- For the bg color applied to the line 
+    //2- For the opacity applied to the line 
+    color: $text-color;
 }
 
 @mixin add-line() {

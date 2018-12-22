@@ -23,6 +23,7 @@ body {
 .section-title {
     // This class defines the global rules that used for heading elments it self of any section
     text-align: center;
+    margin-bottom: 1rem;
     font-size: 2.25rem;
     @media (max-width: 767px) {
         font-size: 1.75rem;
@@ -37,6 +38,10 @@ body {
 .bg-gradient-color {
     // this class colors the text of any element used it with linear-gradient colors
     @include linear-gradient-bg();
+}
+
+.bg-solid-color {
+    @include solid-color-bg();
 }
 
 .overlay {
@@ -73,4 +78,41 @@ body {
 
 .see-more-area {
     display: block;
+}
+
+.wave-shape {
+    display: block;
+    width: 100%;
+    fill: $ma-white-color;
+}
+
+.no-borders {
+    border: none;
+    outline: none;
+}
+
+.back-to-top {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    #{$end-direction}: 20px;
+    bottom: 20px;
+    display: none;
+    cursor: pointer;
+    z-index: 20;
+    @include linear-gradient-bg();
+    @include ma-box-shadow(0,
+    3,
+    15,
+    0,
+    $transparent-black-50);
+    .icon {
+        position: absolute;
+        top: 50%;
+        #{$start-direction}: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.5rem;
+        @include solid-color-text($ma-white-color);
+    }
 }

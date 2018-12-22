@@ -5,8 +5,7 @@
     text-align: center;
     text-transform: capitalize;
     padding: .75rem 1.5rem; // border: 1px solid;
-    border-radius: .25rem;
-    // margin-bottom: 1.25rem;
+    border-radius: .25rem; // margin-bottom: 1.25rem;
     width: auto;
     box-shadow: 0 (3px * $y-axe-direction) 30px $transparent-black-50;
     transition: all .5s ease-in-out;
@@ -23,7 +22,7 @@
     background-color: $ma-accent-color;
     border-color: $ma-accent-color;
     &:hover {
-        background: $ma-gradient-color-2;
+        background: $ma-main-color;
     }
 }
 

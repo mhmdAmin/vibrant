@@ -1,0 +1,48 @@
+/* ===== Start FAQ section Rules ====== */
+
+.faq {
+    /*Start FAQ-Accordion Rules*/
+    .faq-accordion {
+        margin-bottom: 3rem;
+        .card {
+            border-color: $ma-accent-color;
+        }
+        .card-header {
+            position: relative;
+            @include linear-gradient-bg();
+        }
+        .faq-btn {
+            width: 100%;
+            padding-#{$start-direction}: 10px;
+            padding-#{$end-direction}: 20px;
+            text-align:#{$start-direction};
+            text-decoration: none;
+            border-radius: 0;
+            font-weight: bold;
+            white-space: normal;
+            color: $ma-white-color;
+            &::before {
+                content: "\f068";
+                display: inline-block;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                #{$end-direction}: 10px;
+                #{$start-direction}: auto;
+            }
+            &.collapsed::before {
+                content: "\f067";
+            }
+        }
+    }
+    /*End FAQ-Accordion Rules*/
+    //
+}
+
+/* =====End FAQ section Rules ====== */

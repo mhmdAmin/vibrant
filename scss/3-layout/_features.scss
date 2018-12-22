@@ -15,17 +15,21 @@
         &:before {
             //to add custom overlay over the .feature-box
             content: '';
-            border-radius: 50%;
+            /*border-radius: 50%;
             transform: scale(0);
-            transform-origin: center;
+            transform-origin: center;*/
+            visibility: hidden;
+            opacity: 0;
             transition: all .5s ease-in-out;
             @include add-overlay(); // to add the strucure of the overlay
             @include linear-gradient-bg(); // to add the Backgroung-color of the overlay
         }
         &:hover {
-            transform: translateY(-10px);
+            @include ma-box-shadow(1, 3, 50, 5, $transparent-black-25);
             &:before {
-                transform: scale(2);
+                /*transform: scale(2);*/
+                visibility: visible;
+                opacity: 1;
             }
             .feat-icon {
                 opacity: 1;

@@ -1,0 +1,15 @@
+/*Start contact-us section Rules*/
+
+.take-action {
+    .cta-wrapper {
+        padding: 60px 0;
+        color: $ma-white-color;
+        .cta-title {
+            @media(max-width: 991px) {
+                margin-bottom: 1.25rem
+            }
+        }
+    }
+}
+
+/*End contact-us section Rules*/
