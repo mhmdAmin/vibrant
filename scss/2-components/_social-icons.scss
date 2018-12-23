@@ -6,6 +6,8 @@
     .sc-title {
         display: inline-block;
         margin-right: 20px;
+        @include solid-color-text($ma-main-color);
+        font-weight: $font-w-bold;
         i.fa {
             margin-right: 5px;
         }

@@ -48,10 +48,13 @@
             font-size: .85rem;
             font-weight: $font-w-bold;
             text-decoration: none;
-            @include solid-color-text();
+            @include solid-color-text($ma-main-color);
             &:hover {
                 @include linear-gradient-text();
             }
+        }
+        &:hover {
+            @include ma-box-shadow(0, 3, 50, 0, $transparent-black-25);
         }
     }
 }

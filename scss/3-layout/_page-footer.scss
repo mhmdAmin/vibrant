@@ -1,0 +1,24 @@
+.page-footer {
+    @include solid-color-bg($ma-grey-color);
+    padding: 20px 0;
+    text-align: center;
+    .brand {
+        text-decoration: none;
+        display: inline-block;
+        width: auto;
+        margin-bottom: 1rem;
+        img {
+            width: 120px;
+        }
+    }
+    .copyrights {
+        display: block;
+        text-align: center;
+        @include solid-color-text();
+        font: {
+            size: .8rem;
+            weight: $font-w-medium;
+        }
+        margin: 0;
+    }
+}
