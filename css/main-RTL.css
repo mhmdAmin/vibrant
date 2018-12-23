@@ -277,7 +277,7 @@ body {
 .ma-navbar .navbar-brand {
   color: #fff !important;
   font-weight: 500;
-  width: 90px;
+  width: 150px;
 }
 
 @media (max-width: 991px) {
@@ -1060,15 +1060,20 @@ body {
   text-align: center;
 }
 
-.page-footer .brand {
+.page-footer .footer-brand {
   text-decoration: none;
   display: inline-block;
   width: auto;
-  margin-bottom: 1rem;
 }
 
-.page-footer .brand img {
-  width: 120px;
+.page-footer .footer-brand img {
+  width: 150px;
+}
+
+@media (max-width: 991px) {
+  .page-footer .footer-brand img {
+    width: 120px;
+  }
 }
 
 .page-footer .copyrights {
