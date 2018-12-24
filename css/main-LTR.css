@@ -959,6 +959,59 @@ body {
 }
 
 /* =====End FAQ section Rules ====== */
+/*==========================  START TESTMOIALS SECTION  ==========================*/
+.testmonials .swiper-wrapper .swiper-slide .testmonial-content {
+  max-width: 90%;
+  margin: 15px auto;
+  border-radius: 1rem 1rem .25rem .25rem;
+}
+
+.testmonials .swiper-wrapper .swiper-slide .testmonial-content .content .testmonial-text {
+  overflow-y: auto;
+}
+
+.testmonials .swiper-wrapper .swiper-slide .testmonial-content .customer-info {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.testmonials .swiper-wrapper .swiper-slide .testmonial-content .customer-info img {
+  padding: 3px;
+}
+
+.testmonials .swiper-wrapper .swiper-slide .testmonial-content .customer-info .customer-details {
+  padding-left: .75rem;
+  -webkit-transform: translateY(12px);
+          transform: translateY(12px);
+  display: inline-block;
+}
+
+.testmonials .swiper-wrapper .swiper-slide .testmonial-content .customer-info .customer-details .customer-name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+.testmonials .swiper-wrapper .swiper-slide .testmonial-content .customer-info .customer-details .customer-role {
+  font-size: .85rem;
+  margin-bottom: .5rem;
+}
+
+@media (max-width: 991px) {
+  .testmonials .swiper-wrapper .swiper-slide .testmonial-content .customer-testmonial {
+    padding: 0 10px;
+  }
+}
+
+.testmonials .swiper-wrapper .swiper-slide .testmonial-content i.fa-quote-left {
+  display: block;
+  font-size: 60px;
+  opacity: .4;
+  margin: 1rem;
+  color: #2B32B2;
+}
+
+/*==========================  END TESTMOIALS SECTION  ==========================*/
 .contact-us {
   /*Start user-form Rules*/
   /*End user-form Rules*/

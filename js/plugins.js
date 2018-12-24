@@ -5,6 +5,55 @@ $(function () {
     var backToTopButton = $(".back-to-top");
 
 
+    //initialize swiper [testmonial Section] when document ready
+    var testmonialsSlider = new Swiper('.testmonials .swiper-container', {
+        // Optional parameters
+        speed: 500,
+        loop: true,
+        grabCursor: true,
+        slidesPerView: 1,
+        delay: 5000,
+        autoplay: {
+            delay: 9000,
+        },
+        breakpoints: {
+            // showing only 3 logo items in screens smaller than 991px wide
+            991: {
+                slidesPerView: 1
+            }
+        }
+        , navigation: {
+            nextEl: '.testmonials .swiper-button-next', prevEl: '.testmonials .swiper-button-prev',
+        }
+    }
+    );
+
+
+    //initialize swiper [clients Section] when document ready
+    var partenersSlider = new Swiper('.our-clients .swiper-container', {
+        // Optional parameters
+        speed: 600,
+        loop: true,
+        spaceBetween: 30,
+        grabCursor: true,
+        delay: 5000,
+        autoplay: {
+            delay: 5000,
+        }
+        , //showing 6 logo items in screen larger than 991px wide
+        slidesPerView: 6,
+        breakpoints: {
+            // showing only 3 logo items in screens smaller than 991px wide
+            991: {
+                slidesPerView: 3
+            }
+        }
+        ,
+    }
+
+    );
+
+
 
     //2- Start Smooth Scrolling To Window Top When Clicking on Back To Top Button
     $(backToTopButton).on("click", function () {
