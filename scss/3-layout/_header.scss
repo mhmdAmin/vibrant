@@ -3,7 +3,7 @@
 .page-header {
     height: 100vh;
     padding: 120px 0;
-    background-color: $ma-gradient-color-1; //gradients fallback for old browsers 
+    background-color: $ma-main-color; //gradients fallback for old browsers 
     @include linear-gradient-bg();
     .header-title {
         color: $ma-white-color;

@@ -1,8 +1,39 @@
 $(function () {
 
+    //GLOBAL VARIBALES
+    var root = $('html, body'),
+        bdy = $("body"),
+        navMain = $("nav.main-navbar"),
+        navMobile = $("nav .navbar-mobile-menu-wrapper"),
+        backToTopButton = $(".back-to-top"),
+        optionBoxWraper = $(".option-box .options-wraper"),
+        navHeight = navMain.innerHeight();
 
 
-    var backToTopButton = $(".back-to-top");
+
+
+    /*                   START GENERAL FUNCTIONS                   */
+
+    $(bdy).scrollspy({
+        target: navMain,
+        offset: navHeight
+    });
+
+    // 1- Start Smooth Scrolling To page Sections
+
+    $(".navbar .nav-link").on('click', function (e) {
+        var link = $(this).attr("href")
+
+        if (link.charAt(0) === "#") {
+            e.preventDefault();
+            var target = this.hash;
+            $(root).animate({
+                scrollTop: $(target).offset().top - navHeight + 1
+            }, 500);
+        }
+    });
+
+    //End Smooth Scrolling To page Sections
 
 
     //initialize swiper [testmonial Section] when document ready
@@ -12,17 +43,21 @@ $(function () {
         loop: true,
         grabCursor: true,
         slidesPerView: 1,
+        spaceBetween: 30,
         delay: 5000,
         autoplay: {
-            delay: 9000,
+            delay: 5000,
         },
         breakpoints: {
             // showing only 3 logo items in screens smaller than 991px wide
             991: {
                 slidesPerView: 1
             }
-        }
-        , navigation: {
+        },
+
+
+
+        navigation: {
             nextEl: '.testmonials .swiper-button-next', prevEl: '.testmonials .swiper-button-prev',
         }
     }

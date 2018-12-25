@@ -3,6 +3,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     direction: $direction; //the direction defined according to the dirction captured from the config-file used in top of the RTL-main.scss OR RTL-main.scss 
     text-align: $start-direction; //the direction definedleft OR right according to the dirction captured from the config-file used in top of the RTL-main.scss OR RTL-main.scss
+    position: relative;
 }
 
 .mega-section {

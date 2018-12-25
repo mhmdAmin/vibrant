@@ -1,63 +1,57 @@
 /*==========================  START TESTMOIALS SECTION  ==========================*/
 
 .testmonials {
-    .swiper-wrapper {
-        .swiper-slide {
-            .testmonial-content {
-                max-width: 90%;
-                margin: 15px auto;
-                border-radius: 1rem 1rem .25rem .25rem;
-                .content {
-                    .testmonial-text {
-                        overflow-y: auto;
-                    }
+    .testmonial-content {
+        max-width: 75%;
+        margin: 15px auto;
+        border-radius: 1rem 1rem .25rem .25rem;
+        @include ma-box-shadow(0, 3, 15, 0, $transparent-black-25);
+        .content {
+            .testmonial-text {
+                overflow-y: auto;
+                font-weight: $font-w-medium;
+                font-style: italic;
+                @include solid-color-text();
+            }
+        }
+        .customer-info {
+            margin-top: 0;
+            margin-bottom: 20px;
+            img {
+                padding: 3px;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+            }
+            .customer-details {
+                transform: translateY(12px);
+                display: inline-block;
+                .customer-name {
+                    font-size: 1rem;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                    @include linear-gradient-text();
                 }
-                .customer-info {
-                    margin-top: 0;
-                    margin-bottom: 20px;
-                    img {
-                        padding: 3px;
-                    }
-                    .customer-details {
-                        padding-#{$start-direction}: .75rem;
-                        transform: translateY(12px);
-                        display: inline-block;
-                        .customer-name {
-                            font-size: 1rem;
-                            font-weight: bold;
-                            margin-bottom: .5rem;
-                        }
-                        .customer-role {
-                            font-size: .85rem;
-                            margin-bottom: .5rem;
-                        }
-                    }
-                }
-                .customer-testmonial {
-                    @media(max-width: 991px) {
-                        padding: 0 10px;
-                    }
-                }
-                i.fa-quote-left {
-                    display: block;
-                    font-size: 60px;
-                    opacity: .4;
-                    margin: 1rem;
-                    @include solid-color-text();
+                .customer-role {
+                    font-size: .85rem;
+                    margin-bottom: 0;
+                    @include linear-gradient-text()
                 }
             }
         }
+        .customer-testmonial {
+            @media(max-width: 991px) {
+                padding: 0 10px;
+            }
+        }
+        .icon {
+            display: block;
+            font-size: 60px;
+            opacity: .65;
+            margin: 1rem;
+            @include linear-gradient-text();
+        }
     }
-    div.swiper-button-next,
-    div.swiper-button-prev {
-        // background-image: none;
-        // i {
-        //     font-size: 60px;
-        //     display: none;
-        // }
-    } // div.swiper-button-prev {
-    //     left: 15px;
-    // }
 }
 
 /*==========================  END TESTMOIALS SECTION  ==========================*/

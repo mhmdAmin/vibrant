@@ -24,11 +24,9 @@
             background-color: $transparent;
             border-color: $transparent;
             cursor: pointer;
-            &:hover {
-                border-color: $ma-main-color;
-            }
+            &:hover,
             &.active {
-                border-color: $ma-main-color;
+                border-color: $ma-accent-color;
             }
         }
     }

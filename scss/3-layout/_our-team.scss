@@ -54,6 +54,13 @@
             .tm-name {
                 font-size: 1.25rem;
                 font-weight: $font-w-bold;
+                margin-bottom: 0;
+                @include linear-gradient-text();
+            }
+            .tm-role {
+                font-size: .8rem;
+                font-weight: $font-w-medium;
+                @include solid-color-text();
             }
         }
     }

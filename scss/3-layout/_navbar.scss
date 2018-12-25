@@ -1,16 +1,20 @@
 /*===== Start Navbar Rules =====*/
 
-.ma-navbar {
+.main-navbar {
     max-height: 80px;
     height: 80px;
-    background-image: $ma-gradient-color-1; //gradients fallback for old browsers 
+    background-color: $ma-main-color; //gradients fallback for old browsers 
     @include linear-gradient-bg();
+    @media(max-width: 991px) {
+        padding: 0;
+    }
     .navbar-brand {
         color: $ma-white-color !important;
         font-weight: $font-w-medium;
         width: 150px;
         @media(max-width: 991px) {
-            margin: 0;
+            width: 100px;
+            margin-#{$start-direction}: 1rem;
         }
     }
     .navbar-toggler {
@@ -34,17 +38,56 @@
         padding: 0
     }
     .nav-item {
-        margin-#{$end-direction}: 2rem;
+        margin-#{$end-direction}: 1rem;
         @media (max-width: 991px) {
+            margin-#{$end-direction}:0;
+            &:not(:last-of-type) {
+                margin-bottom: 1rem;
+            }
             margin-#{$end-direction}:0;
         }
     }
     .nav-link {
         color: $ma-white-color !important;
-        font-weight: $font-w-thin;
+        font-size: .85rem;
+        font-weight: $font-w-medium;
         transition: all .5s ease-in-out;
+        border-bottom: 2px solid $transparent;
         &:hover {
             color: $ma-accent-color !important;
+        }
+        &.active {
+            color: $ma-accent-color !important; // border-bottom: 2px solid $ma-accent-color;
+            position: relative;
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: -22px;
+                bottom: 0;
+                height: 227%;
+                background-color: $ma-white-color;
+                width: 100%;
+                border-bottom: 4px solid;
+                z-index: -1;
+                @include ma-box-shadow(0, 3, 15, 0, $transparent-black-25);
+            }
+            @media (max-width: 991px) {
+                border: none;
+                color: $ma-accent-color !important;
+                background-color: $ma-white-color !important;
+                margin-#{$start-direction}: 2rem;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+        @media (max-width:991px) {
+            margin-#{$start-direction}: 1rem;
+            display: inline-block;
+            padding: .5rem 1rem;
+            border-radius: .5rem;
         }
     }
     @media (max-width:991px) {
