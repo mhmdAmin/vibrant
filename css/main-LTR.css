@@ -278,6 +278,11 @@ body {
 @media (max-width: 991px) {
   .main-navbar {
     padding: 0;
+    max-height: none;
+    height: auto;
+    background-color: #0479bd;
+    -webkit-box-shadow: 0px 5px 30px 0px #0479bd;
+            box-shadow: 0px 5px 30px 0px #0479bd;
   }
 }
 
@@ -291,6 +296,8 @@ body {
   .main-navbar .navbar-brand {
     width: 100px;
     margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
 }
 
@@ -315,6 +322,14 @@ body {
   margin-bottom: 5px;
 }
 
+@media (max-width: 991px) {
+  .main-navbar .navbar-toggler {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}
+
 .main-navbar .navbar-nav {
   padding: 0;
 }
@@ -325,11 +340,7 @@ body {
 
 @media (max-width: 991px) {
   .main-navbar .nav-item {
-    margin-right: 0;
-    margin-right: 0;
-  }
-  .main-navbar .nav-item:not(:last-of-type) {
-    margin-bottom: 1rem;
+    margin: 0;
   }
 }
 
@@ -344,6 +355,13 @@ body {
 
 .main-navbar .nav-link:hover {
   color: #ff00d4 !important;
+}
+
+@media (max-width: 991px) {
+  .main-navbar .nav-link:hover {
+    border-color: #ff00d4 !important;
+    background-color: #fff;
+  }
 }
 
 .main-navbar .nav-link.active {
@@ -368,11 +386,17 @@ body {
 }
 
 @media (max-width: 991px) {
+  .main-navbar .nav-link.active::after {
+    border-color: #ff00d4 !important;
+    background-color: #fff;
+  }
+}
+
+@media (max-width: 991px) {
   .main-navbar .nav-link.active {
     border: none;
     color: #ff00d4 !important;
     background-color: #fff !important;
-    margin-left: 2rem;
   }
   .main-navbar .nav-link.active::after {
     display: none;
@@ -381,21 +405,7 @@ body {
 
 @media (max-width: 991px) {
   .main-navbar .nav-link {
-    margin-left: 1rem;
-    display: inline-block;
-    padding: .5rem 1rem;
-    border-radius: .5rem;
-  }
-}
-
-@media (max-width: 991px) {
-  .main-navbar {
-    max-height: none;
-    height: auto;
-    background-color: #0479bd;
     padding: 1rem;
-    -webkit-box-shadow: 0px 5px 30px 0px #0479bd;
-            box-shadow: 0px 5px 30px 0px #0479bd;
   }
 }
 
