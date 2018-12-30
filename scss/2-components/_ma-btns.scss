@@ -18,11 +18,14 @@
 }
 
 .ma-btn-primary {
+    // color: $ma-white-color !important;
+    // background-color: $ma-accent-color;
+    // border-color: $ma-accent-color;
     color: $ma-white-color !important;
-    background-color: $ma-accent-color;
-    border-color: $ma-accent-color;
+    background-color: $ma-main-color;
+    border-color: $ma-main-color;
     &:hover {
-        background: $ma-main-color;
+        background: $ma-accent-color;
     }
 }
 

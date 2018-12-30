@@ -7,8 +7,12 @@
     background-position: center;
     background-size: cover;
     color: #fff;
+    @media(max-width: 767px) {
+        padding: 3rem 0 0;
+    }
     .overlay {
         @include linear-gradient-bg();
+        opacity: .9;
     }
     .section-heading {
         .line-solid-color {
@@ -18,7 +22,25 @@
     .info-box {
         color: $ma-white-color;
         text-align: center;
-        margin-bottom: 3rem;
+        @media(max-width: 767px) {
+            margin-bottom: 3rem;
+        }
+        .info-icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1rem;
+            opacity: .65;
+        }
+        .info-num {
+            display: inline-block;
+            font-size: 2rem;
+            line-height: 1;
+            font-weight: $font-w-bold;
+        }
+        .info-desc {
+            font-size: 2rem;
+            display: inline-block;
+        }
     }
 }
 

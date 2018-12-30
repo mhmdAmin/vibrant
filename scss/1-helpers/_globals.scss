@@ -63,6 +63,18 @@ body {
     @include solid-color-bg();
 }
 
+.line-left {
+    // this class make the line start from the LEFT
+    margin-#{$start-direction}: 0;
+    margin-#{$end-direction}: auto;
+}
+
+.line-right {
+    // this class make the line start from the RIGHT
+    margin-#{$start-direction}: auto;
+    margin-#{$end-direction}: 0;
+}
+
 /*  to enable any element that previously had the .disabled-element class.  */
 
 .enabeld-element {
@@ -90,6 +102,15 @@ body {
 .no-borders {
     border: none;
     outline: none;
+}
+
+.up-heading-span {
+    /*  To Style a Span Overover Any Heading  */
+    display: block;
+    margin-bottom: -7px;
+    font-size: .85rem;
+    color: $ma-dark-grey-color;
+    font-weight: $font-w-bold;
 }
 
 .back-to-top {

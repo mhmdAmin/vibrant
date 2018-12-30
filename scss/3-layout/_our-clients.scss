@@ -1,3 +1,10 @@
 .our-clients {
-    background-color: $ma-grey-color;
+    // background-color: $ma-grey-color;
+    .logo {
+        filter: contrast(-3%);
+        transition: all .5s ease-in-out;
+        &:hover {
+            filter: contrast(3%);
+        }
+    }
 }
