@@ -1,7 +1,8 @@
 /*===== Start Page header Rules =====*/
 
 .page-header {
-    height: 100vh;
+    margin-top: $navbar-hieght;
+    height: calc(100vh - #{$navbar-hieght});
     padding: 120px 0;
     background-color: $ma-main-color; //gradients fallback for old browsers 
     @include linear-gradient-bg();

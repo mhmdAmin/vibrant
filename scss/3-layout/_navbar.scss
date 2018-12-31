@@ -1,8 +1,8 @@
 /*===== Start Navbar Rules =====*/
 
 .main-navbar {
-    max-height: 70px;
-    height: 70px;
+    max-height: $navbar-hieght;
+    height: $navbar-hieght;
     background-color: $ma-main-color; //gradients fallback for old browsers 
     @include linear-gradient-bg();
     @media(max-width: 991px) {
@@ -61,6 +61,9 @@
         padding: .5rem 1rem !important;
         transition: all .5s ease-in-out;
         border-bottom: 2px solid $transparent;
+        @media (max-width: 991px) {
+            padding: 1.5rem 1rem !important;
+        }
         &:hover {
             color: $ma-accent-color !important;
             @media(max-width: 991px) {
@@ -90,16 +93,13 @@
                 }
             }
             @media (max-width: 991px) {
-                border: none;
+                border-color: $ma-accent-color !important;
                 color: $ma-accent-color !important;
                 background-color: $ma-white-color !important;
                 &::after {
                     display: none;
                 }
             }
-        }
-        @media (max-width:991px) {
-            padding: 1rem;
         }
     }
 }

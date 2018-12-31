@@ -373,6 +373,12 @@ body {
   border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
 
+@media (max-width: 991px) {
+  .main-navbar .nav-link {
+    padding: 1.5rem 1rem !important;
+  }
+}
+
 .main-navbar .nav-link:hover {
   color: #d90a7d !important;
 }
@@ -414,7 +420,7 @@ body {
 
 @media (max-width: 991px) {
   .main-navbar .nav-link.active {
-    border: none;
+    border-color: #d90a7d !important;
     color: #d90a7d !important;
     background-color: #fff !important;
   }
@@ -423,16 +429,11 @@ body {
   }
 }
 
-@media (max-width: 991px) {
-  .main-navbar .nav-link {
-    padding: 1rem;
-  }
-}
-
 /*===== End Navbar Rules =====*/
 /*===== Start Page header Rules =====*/
 .page-header {
-  height: 100vh;
+  margin-top: 70px;
+  height: calc(100vh - 70px);
   padding: 120px 0;
   background-color: #0479bd;
   background-image: -webkit-linear-gradient(45deg, #d90a7d, #0479bd);
