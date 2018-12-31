@@ -555,12 +555,8 @@ body {
 }
 
 .features .feat-text {
-  line-height: 1.8;
-  color: #777;
+  color: #0479bd;
   font-weight: 500;
-  letter-spacing: .9px;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
 }
 
 /*===== End features Section Rules =====*/
@@ -672,7 +668,7 @@ body {
 .our-services .ma-service-text {
   font-weight: 500;
   margin-bottom: 3rem;
-  color: #777;
+  color: #0479bd;
 }
 
 .our-video {

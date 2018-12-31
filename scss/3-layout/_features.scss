@@ -38,7 +38,7 @@
                 -webkit-text-fill-color: $ma-white-color;
             }
             .feat-text {
-                color: $ma-white-color;
+                @include solid-color-text ($ma-white-color);
                 background-image: none;
             }
         }
@@ -56,11 +56,8 @@
         @include linear-gradient-text();
     }
     .feat-text {
-        line-height: 1.8;
-        color: $ma-dark-grey-color;
+        @include solid-color-text();
         font-weight: $font-w-medium;
-        letter-spacing: .9px;
-        transition: all .5s ease-in-out;
     }
 }
 

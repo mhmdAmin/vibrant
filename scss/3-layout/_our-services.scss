@@ -4,8 +4,7 @@
         position: relative;
         padding: 5rem 0;
         @media(max-width: 991px) {
-            padding: 2rem 0;
-            // text-align: center;
+            padding: 2rem 0; // text-align: center;
         }
         .service-num {
             position: absolute;
@@ -40,6 +39,6 @@
     .ma-service-text {
         font-weight: $font-w-medium;
         margin-bottom: 3rem;
-        @include solid-color-text($ma-dark-grey-color);
+        @include solid-color-text();
     }
 }
