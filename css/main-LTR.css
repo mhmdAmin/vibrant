@@ -147,6 +147,16 @@ body {
   color: #fff;
 }
 
+*::-moz-selection {
+  color: #fff;
+  background-color: rgba(217, 10, 125, 0.6);
+}
+
+*::selection {
+  color: #fff;
+  background-color: rgba(217, 10, 125, 0.6);
+}
+
 /*ُEnd importing global Helpers */
 /*Start global components rules */
 .ma-btn {
@@ -154,6 +164,7 @@ body {
   text-decoration: none;
   text-align: center;
   text-transform: capitalize;
+  outline: none;
   padding: .75rem 1.5rem;
   border-radius: .25rem;
   width: auto;
@@ -1317,6 +1328,61 @@ body {
 @media (max-width: 991px) {
   .take-action .cta-wrapper .cta-title {
     margin-bottom: 1.25rem;
+  }
+}
+
+.take-action .cta-wrapper .email-capture-form {
+  position: relative;
+}
+
+.take-action .cta-wrapper .email-capture-form .email-lbl {
+  display: block;
+  font-size: .75rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.take-action .cta-wrapper .email-capture-form .captured-email {
+  display: inline-block;
+  font-size: .85rem;
+  width: 100%;
+  border: none;
+  border-radius: .25rem;
+  outline: none;
+  padding: .75rem .5rem;
+  color: #fff;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+}
+
+.take-action .cta-wrapper .email-capture-form .subscripe-btn {
+  position: absolute;
+  right: 0;
+  left: auto;
+  bottom: 0;
+  border: 1px solid;
+  border-radius: .25rem;
+  padding: .75rem 1rem;
+  font-size: .85rem;
+  font-weight: 500;
+  background: #d90a7d;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.take-action .cta-wrapper .email-capture-form .subscripe-btn:hover {
+  background: #fff;
+  color: #d90a7d;
+}
+
+@media (max-width: 991px) {
+  .take-action .cta-wrapper .email-capture-form .subscripe-btn {
+    position: relative;
+    margin-top: .5rem;
+    float: right;
+    border-radius: .25rem;
   }
 }
 

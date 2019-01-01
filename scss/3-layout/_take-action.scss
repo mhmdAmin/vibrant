@@ -9,6 +9,52 @@
                 margin-bottom: 1.25rem
             }
         }
+        .email-capture-form {
+            position: relative;
+            .email-lbl {
+                display: block;
+                font-size: .75rem;
+                font-weight: $font-w-bold;
+                margin: 0;
+            }
+            .captured-email {
+                display: inline-block;
+                font-size: .85rem;
+                width: 100%;
+                border: none;
+                border-radius: .25rem;
+                outline: none;
+                padding: .75rem .5rem;
+                color: $ma-white-color;
+                background: transparent;
+                border-bottom: 1px solid $ma-white-color;
+            }
+            .subscripe-btn {
+                position: absolute;
+                #{$end-direction}: 0;
+                #{$start-direction}: auto;
+                bottom: 0;
+                border: 1px solid;
+                border-radius: .25rem;
+                padding: .75rem 1rem;
+                font-size: .85rem;
+                font-weight: $font-w-medium;
+                background: $ma-accent-color;
+                color: $ma-white-color;
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+                &:hover {
+                    background: $ma-white-color;
+                    color: $ma-accent-color;
+                }
+                @media (max-width:991px) {
+                    position: relative;
+                    margin-top: .5rem;
+                    float: #{$end-direction};
+                    border-radius: .25rem;
+                }
+            }
+        }
     }
 }
 

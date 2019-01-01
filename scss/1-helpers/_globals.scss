@@ -138,3 +138,10 @@ body {
         @include solid-color-text($ma-white-color);
     }
 }
+
+* {
+    &::selection {
+        color: #fff;
+        background-color: rgba($ma-accent-color, .6);
+    }
+}
