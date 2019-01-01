@@ -453,20 +453,28 @@ body {
   }
 }
 
+@media (max-width: 991px) {
+  .page-header .header-text-area {
+    margin-bottom: 3rem;
+  }
+}
+
 .page-header .header-subtitle {
   color: #e0e4e8;
   font-size: 1.25rem;
   font-weight: 400;
-  margin-bottom: 1rem;
-}
-
-.page-header .cta-links-area {
-  padding: 1rem 0;
+  margin-bottom: 2rem;
 }
 
 .page-header .cta-links-area .ma-btn {
   width: 100%;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .page-header .cta-links-area .ma-btn {
+    margin-bottom: 1.25rem;
+  }
 }
 
 @media (max-width: 991px) {

@@ -16,18 +16,25 @@
             font-weight: 600;
         }
     }
+    .header-text-area {
+        @media (max-width: 991px) {
+            margin-bottom: 3rem;
+        }
+    }
     .header-subtitle {
         color: $ma-grey-color;
         font-size: 1.25rem;
         font-weight: $font-w-thin;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         @media (max-width: 991px) {}
     }
     .cta-links-area {
-        padding: 1rem 0;
         .ma-btn {
             width: 100%;
-            margin-bottom: 1.25rem;
+            margin-bottom: 0;
+            @media (max-width: 991px) {
+                margin-bottom: 1.25rem;
+            }
         }
     }
     @media (max-width: 991px) {
