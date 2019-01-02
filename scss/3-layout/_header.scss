@@ -30,10 +30,15 @@
     }
     .cta-links-area {
         .ma-btn {
-            width: 100%;
+            width: auto;
             margin-bottom: 0;
+            &:not(:last-of-type) {
+                margin-#{$end-direction}: 1rem;
+            }
             @media (max-width: 991px) {
-                margin-bottom: 1.25rem;
+                &:not(:last-of-type) {
+                    margin-bottom: 2rem;
+                }
             }
         }
     }

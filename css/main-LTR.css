@@ -478,13 +478,17 @@ body {
 }
 
 .page-header .cta-links-area .ma-btn {
-  width: 100%;
+  width: auto;
   margin-bottom: 0;
 }
 
+.page-header .cta-links-area .ma-btn:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
 @media (max-width: 991px) {
-  .page-header .cta-links-area .ma-btn {
-    margin-bottom: 1.25rem;
+  .page-header .cta-links-area .ma-btn:not(:last-of-type) {
+    margin-bottom: 2rem;
   }
 }
 
@@ -1346,13 +1350,21 @@ body {
   display: inline-block;
   font-size: .85rem;
   width: 100%;
-  border: none;
   border-radius: .25rem;
   outline: none;
-  padding: .75rem .5rem;
+  padding: .5rem;
   color: #fff;
   background: transparent;
-  border-bottom: 1px solid #fff;
+  border: 1px solid #fff;
+}
+
+.take-action .cta-wrapper .email-capture-form .email-warning {
+  position: absolute;
+  bottom: -1.25rem;
+  left: 0;
+  font-size: .75rem;
+  font-style: italic;
+  color: #e0e4e8;
 }
 
 .take-action .cta-wrapper .email-capture-form .subscripe-btn {
@@ -1362,7 +1374,7 @@ body {
   bottom: 0;
   border: 1px solid;
   border-radius: .25rem;
-  padding: .75rem 1rem;
+  padding: .5rem;
   font-size: .85rem;
   font-weight: 500;
   background: #d90a7d;
@@ -1375,15 +1387,6 @@ body {
 .take-action .cta-wrapper .email-capture-form .subscripe-btn:hover {
   background: #fff;
   color: #d90a7d;
-}
-
-@media (max-width: 991px) {
-  .take-action .cta-wrapper .email-capture-form .subscripe-btn {
-    position: relative;
-    margin-top: .5rem;
-    float: right;
-    border-radius: .25rem;
-  }
 }
 
 /*End contact-us section Rules*/
