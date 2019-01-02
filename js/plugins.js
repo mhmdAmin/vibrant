@@ -29,7 +29,9 @@ $(function () {
             var target = this.hash;
             $(root).animate({
                 scrollTop: $(target).offset().top - navHeight + 1
+
             }, 500);
+
         }
     });
 

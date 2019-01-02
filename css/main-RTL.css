@@ -365,7 +365,7 @@ body {
 }
 
 .main-navbar .nav-item {
-  margin-left: 1rem;
+  margin: 0;
 }
 
 @media (max-width: 991px) {
@@ -375,13 +375,14 @@ body {
 }
 
 .main-navbar .nav-link {
-  color: #fff !important;
+  color: #e0e4e8 !important;
   font-size: .85rem;
   font-weight: 500;
   padding: .5rem 1rem !important;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
   border-bottom: 2px solid rgba(0, 0, 0, 0);
+  position: relative;
 }
 
 @media (max-width: 991px) {
@@ -391,13 +392,14 @@ body {
 }
 
 .main-navbar .nav-link:hover {
-  color: #d90a7d !important;
+  color: #fff !important;
 }
 
 @media (max-width: 991px) {
   .main-navbar .nav-link:hover {
     border-color: #d90a7d !important;
     background-color: #fff;
+    color: #d90a7d !important;
   }
 }
 
