@@ -1,9 +1,13 @@
 /*Start contact-us section Rules*/
 
 .take-action {
+    .wave-shape {
+        @include solid-color-bg();
+    }
     .cta-wrapper {
         padding: 60px 0;
-        color: $ma-white-color;
+        @include solid-color-text($ma-white-color);
+        @include solid-color-bg();
         .cta-title {
             @media(max-width: 991px) {
                 margin-bottom: 1.25rem
@@ -16,6 +20,7 @@
                 font-size: .75rem;
                 font-weight: $font-w-bold;
                 margin: 0;
+                text-align: left //Always text-align:left
             }
             .captured-email {
                 display: inline-block;
@@ -27,6 +32,7 @@
                 color: $ma-white-color;
                 background: transparent;
                 border: 1px solid $ma-white-color;
+                text-align: left //Always text-align:left
             }
             .email-warning {
                 position: absolute;
@@ -38,8 +44,8 @@
             }
             .subscripe-btn {
                 position: absolute;
-                #{$end-direction}: 0;
-                #{$start-direction}: auto;
+                right: 0; //Always right:0
+                left: auto; //Always left:auto
                 bottom: 0;
                 border: 1px solid;
                 border-radius: .25rem;
@@ -54,7 +60,6 @@
                     background: $ma-white-color;
                     color: $ma-accent-color;
                 }
-                @media (max-width:991px) {}
             }
         }
     }

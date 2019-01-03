@@ -1,5 +1,11 @@
 .contact-us {
     /*Start user-form Rules*/
+    .section-title {
+        text-align: #{$start-direction};
+    }
+    .sc-hloder {
+        text-align: #{$start-direction};
+    }
     .user-form {
         margin-bottom: 3rem;
         label {

@@ -17,7 +17,9 @@
         }
     }
     .header-text-area {
+        text-align: #{$start-direction};
         @media (max-width: 991px) {
+            text-align: center;
             margin-bottom: 3rem;
         }
     }
@@ -29,15 +31,15 @@
         @media (max-width: 991px) {}
     }
     .cta-links-area {
-        .ma-btn {
-            width: auto;
+        .cta-link {
             margin-bottom: 0;
             &:not(:last-of-type) {
                 margin-#{$end-direction}: 1rem;
             }
             @media (max-width: 991px) {
                 &:not(:last-of-type) {
-                    margin-bottom: 2rem;
+                    margin-bottom: 1rem;
+                    margin-#{$end-direction}: 0;
                 }
             }
         }

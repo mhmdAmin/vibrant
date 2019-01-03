@@ -92,7 +92,7 @@
                         bottom: 0;
                         top: auto;
                         #{$start-direction}: 50%;
-                        transform: translateX(-50%);
+                        transform: translateX(-50% * $x-axe-direction);
                         opacity: .5;
                         @include linear-gradient-bg;
                     }

@@ -63,16 +63,10 @@ body {
     @include solid-color-bg();
 }
 
-.line-left {
-    // this class make the line start from the LEFT
+.line-side {
+    // this class make the line start from the side
     margin-#{$start-direction}: 0;
     margin-#{$end-direction}: auto;
-}
-
-.line-right {
-    // this class make the line start from the RIGHT
-    margin-#{$start-direction}: auto;
-    margin-#{$end-direction}: 0;
 }
 
 /*  to enable any element that previously had the .disabled-element class.  */
@@ -133,7 +127,7 @@ body {
         position: absolute;
         top: 50%;
         #{$start-direction}: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateX( -50% * $x-axe-direction) translateY( -50%);
         font-size: 1.5rem;
         @include solid-color-text($ma-white-color);
     }
@@ -141,7 +135,7 @@ body {
 
 * {
     &::selection {
-        color: #fff;
+        color: $ma-white-color;
         background-color: rgba($ma-accent-color, .6);
     }
 }

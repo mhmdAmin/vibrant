@@ -24,8 +24,9 @@
                 border-radius: 50%;
             }
             .customer-details {
-                transform: translateY(12px);
                 display: inline-block;
+                text-align: #{$start-direction};
+                transform: translateY(12px);
                 .customer-name {
                     font-size: 1rem;
                     font-weight: bold;
@@ -49,6 +50,7 @@
             font-size: 60px;
             opacity: .65;
             margin: 1rem;
+            text-align: left; //always left
             @include linear-gradient-text();
         }
     }
