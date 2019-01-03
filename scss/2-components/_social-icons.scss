@@ -5,11 +5,11 @@
     padding: .75rem 0;
     .sc-title {
         display: inline-block;
-        margin-right: 20px;
+        margin-#{$end-direction}: 20px;
         @include solid-color-text($ma-main-color);
         font-weight: $font-w-bold;
         i.fa {
-            margin-right: 5px;
+            margin-#{$end-direction}: 5px;
         }
     }
     .sc-list {
@@ -19,14 +19,14 @@
         list-style: none;
         .sc-item {
             display: inline-block;
-            margin-right: 5px;
+            margin-#{$end-direction}: 5px;
             margin-bottom: 5px;
             border-radius: 50%;
             @include ma-box-shadow( 0, 3, 15, 0, $transparent-black-25);
             @include linear-gradient-bg();
             transition: all .3s ease-in-out;
             &:last-of-type {
-                margin-right: 0;
+                margin-#{$end-direction}: 0;
             }
             &:hover {
                 transform: translateY(-5px);

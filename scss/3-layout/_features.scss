@@ -6,12 +6,12 @@
         z-index: 1;
         overflow: hidden;
         text-align: center;
-        padding: 4rem 2rem;
+        padding: 2rem 0;
         border-radius: 1rem;
-        @include ma-box-shadow(1, 3, 20, 0, $transparent-black-25);
         margin-bottom: 3rem;
-        background-color: $ma-white-color;
         transition: all .5s ease-in-out;
+        @include ma-box-shadow(1, 3, 20, 0, $transparent-black-25);
+        @include solid-color-bg($ma-white-color);
         &:before {
             //to add custom overlay over the .feature-box
             content: '';
@@ -24,13 +24,12 @@
         &:hover {
             @include ma-box-shadow(1, 3, 50, 5, $transparent-black-25);
             &:before {
-                /*transform: scale(2);*/
                 visibility: visible;
                 opacity: 1;
             }
             .feat-icon {
                 opacity: 1;
-                color: $ma-white-color;
+                @include solid-color-text ($ma-white-color);
                 -webkit-text-fill-color: $ma-white-color;
             }
             .feat-title {
@@ -44,7 +43,7 @@
         }
     }
     .feat-icon {
-        font-size: 4rem;
+        font-size: 2.5rem;
         margin-bottom: 1.5rem; // opacity: .65;
         transition: all .5s ease-in-out;
         @include linear-gradient-text();

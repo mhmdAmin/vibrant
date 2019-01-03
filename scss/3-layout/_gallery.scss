@@ -44,6 +44,7 @@
                 @include add-overlay();
                 @include linear-gradient-bg();
                 transition: all .3s ease-in-out;
+                width: 101%;
                 z-index: 2;
                 opacity: 0;
             }

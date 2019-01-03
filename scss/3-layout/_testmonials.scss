@@ -7,6 +7,8 @@
         border-radius: 1rem 1rem .25rem .25rem;
         @include ma-box-shadow(0, 3, 15, 0, $transparent-black-25);
         .content {
+            padding-#{$start-direction}: 1rem;
+            padding-#{$end-direction}: 1rem;
             .testmonial-text {
                 overflow-y: auto;
                 font-weight: $font-w-medium;
@@ -31,11 +33,15 @@
                     font-size: 1rem;
                     font-weight: bold;
                     margin-bottom: 0;
+                    padding-top: 0;
+                    padding-bottom: 0;
                     @include linear-gradient-text();
                 }
                 .customer-role {
                     font-size: .85rem;
                     margin-bottom: 0;
+                    padding-top: 0;
+                    padding-bottom: 0;
                     @include linear-gradient-text()
                 }
             }
