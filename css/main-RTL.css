@@ -153,10 +153,12 @@ body {
 
 *::-moz-selection {
   background-color: #d90a7d;
+  color: #fff;
 }
 
 *::selection {
   background-color: #d90a7d;
+  color: #fff;
 }
 
 .text-gradient-color::-moz-selection {

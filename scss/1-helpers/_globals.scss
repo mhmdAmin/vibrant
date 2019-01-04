@@ -154,6 +154,7 @@ body {
 * {
     &::selection {
         @include solid-color-bg( $ma-accent-color);
+        @include solid-color-text($ma-white-color);
     }
 }
 
