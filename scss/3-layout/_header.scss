@@ -4,47 +4,48 @@
     margin-top: $navbar-hieght;
     height: calc(100vh - #{$navbar-hieght});
     padding: 120px 0;
-    background-color: $ma-main-color; //gradients fallback for old browsers 
+    @include solid-color-bg(); //gradients fallback for old browsers 
     @include linear-gradient-bg();
+    @include ma-md-and-under-screens {
+        padding: 40px 0;
+    }
     .header-title {
-        color: $ma-white-color;
+        @include solid-color-text($ma-white-color);
         font-weight: $font-w-medium;
         font-size: 3rem;
         margin-bottom: 1rem;
-        @media (max-width: 991px) {
+        @include ma-md-and-under-screens {
             font-size: 2rem;
-            font-weight: 600;
         }
     }
     .header-text-area {
         text-align: #{$start-direction};
-        @media (max-width: 991px) {
+        @include ma-md-and-under-screens {
             text-align: center;
             margin-bottom: 3rem;
         }
     }
     .header-subtitle {
-        color: $ma-grey-color;
+        @include solid-color-text($ma-grey-color);
         font-size: 1.25rem;
         font-weight: $font-w-thin;
         margin-bottom: 2rem;
-        @media (max-width: 991px) {}
     }
     .cta-links-area {
         .cta-link {
             margin-bottom: 0;
-            &:not(:last-of-type) {
+            &:not(:last-child) {
                 margin-#{$end-direction}: 1rem;
             }
-            @media (max-width: 991px) {
-                &:not(:last-of-type) {
+            @include ma-md-and-under-screens {
+                &:not(:last-child) {
                     margin-bottom: 1rem;
-                    margin-#{$end-direction}: 0;
+                    margin-#{$end-direction}: .5rem;
                 }
             }
         }
     }
-    @media (max-width: 991px) {
+    @include ma-md-and-under-screens {
         height: auto;
     }
 }

@@ -9,6 +9,9 @@ body {
 .mega-section {
     // this class adds some global rules to the big sections
     padding: 80px 0;
+    @include ma-sm-and-under-screens {
+        padding: 60px 0;
+    }
 }
 
 .elf-section {
@@ -26,9 +29,8 @@ body {
     text-align: center;
     margin-bottom: 1rem;
     font-size: 2.25rem;
-    color: $ma-dark-grey-color;
     @include solid-color-text($ma-dark-grey-color);
-    @media (max-width: 767px) {
+    @include ma-sm-and-under-screens {
         font-size: 1.75rem;
     }
 }
@@ -55,18 +57,27 @@ body {
 .overlay {
     // this class  works as an transparent overlay
     @include add-overlay();
-    background-color: $transparent-black-50;
+    @include solid-color-bg($transparent-black-50);
+}
+
+%add-line {
+    //this placeholder makes a littel line used whatever you want to seprate content 
+    display: block;
+    width: 75px;
+    height: 4px;
+    border-radius: 0 6px;
+    margin: 1rem auto;
 }
 
 .line-gradient-color {
     // this class adds a littel line after the element used it
-    @include add-line();
+    @extend %add-line;
     @include linear-gradient-bg();
 }
 
 .line-solid-color {
     // this class adds a littel line after the element used it
-    @include add-line();
+    @extend %add-line;
     @include solid-color-bg();
 }
 
@@ -110,8 +121,8 @@ body {
     display: block;
     margin-bottom: -7px;
     font-size: .85rem;
-    color: $ma-dark-grey-color;
     font-weight: $font-w-bold;
+    @include solid-color-text($ma-dark-grey-color);
 }
 
 .back-to-top {
@@ -142,7 +153,14 @@ body {
 
 * {
     &::selection {
-        color: $ma-white-color;
-        background-color: rgba($ma-accent-color, .6);
+        @include solid-color-bg( $ma-accent-color);
+    }
+}
+
+.text-gradient-color {
+    &::selection {
+        @include solid-color-bg( $ma-accent-color);
+        @include solid-color-text($ma-white-color);
+        -webkit-text-fill-color: $ma-white-color;
     }
 }

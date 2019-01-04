@@ -6,10 +6,7 @@
     background-image: url('../../assets/numbers-BG.jpg');
     background-position: center;
     background-size: cover;
-    color: #fff;
-    @media(max-width: 767px) {
-        padding: 3rem 0 0;
-    }
+    @include solid-color-text($ma-white-color);
     .overlay {
         @include linear-gradient-bg();
         opacity: .9;
@@ -20,9 +17,9 @@
         }
     }
     .info-box {
-        color: $ma-white-color;
+        @include solid-color-text($ma-white-color);
         text-align: center;
-        @media(max-width: 767px) {
+        @include ma-sm-and-under-screens {
             margin-bottom: 3rem;
         }
         .info-icon {

@@ -1,4 +1,4 @@
-/*Start contact-us section Rules*/
+/*======== Start contact-us section Rules ========*/
 
 .take-action {
     .wave-shape {
@@ -6,10 +6,10 @@
     }
     .cta-wrapper {
         padding: 60px 0;
-        @include solid-color-text($ma-white-color);
         @include solid-color-bg();
+        @include solid-color-text($ma-white-color);
         .cta-title {
-            @media(max-width: 991px) {
+            @include ma-md-and-under-screens {
                 margin-bottom: 1.25rem
             }
         }
@@ -29,10 +29,10 @@
                 border-radius: .25rem;
                 outline: none;
                 padding: .5rem;
-                color: $ma-white-color;
-                background: transparent;
                 border: 1px solid $ma-white-color;
-                text-align: left //Always text-align:left
+                text-align: left; //Always text-align:left
+                @include solid-color-bg($transparent);
+                @include solid-color-text($ma-white-color);
             }
             .email-warning {
                 position: absolute;
@@ -40,7 +40,7 @@
                 #{$start-direction}: 0;
                 font-size: .75rem;
                 font-style: italic;
-                color: $ma-grey-color;
+                @include solid-color-text($ma-grey-color);
             }
             .subscripe-btn {
                 position: absolute;
@@ -52,17 +52,17 @@
                 padding: .5rem;
                 font-size: .85rem;
                 font-weight: $font-w-medium;
-                background: $ma-accent-color;
-                color: $ma-white-color;
                 cursor: pointer;
-                transition: all .5s ease-in-out;
+                @include ma-transition();
+                @include solid-color-bg($ma-accent-color);
+                @include solid-color-text($ma-white-color);
                 &:hover {
-                    background: $ma-white-color;
-                    color: $ma-accent-color;
+                    @include solid-color-bg($ma-white-color);
+                    @include solid-color-text($ma-accent-color);
                 }
             }
         }
     }
 }
 
-/*End contact-us section Rules*/
+/* ======== End contact-us section Rules ======== */

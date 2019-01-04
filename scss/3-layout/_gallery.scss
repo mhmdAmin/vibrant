@@ -19,9 +19,9 @@
             font-weight: $font-w-medium;
             letter-spacing: 1px;
             border-bottom: 2px solid;
-            transition: all .3s ease-in-out;
-            color: $ma-main-color;
-            background-color: $transparent;
+            @include ma-transition(all, .3s);
+            @include solid-color-text( $ma-main-color);
+            @include solid-color-bg( $transparent);
             border-color: $transparent;
             cursor: pointer;
             &:hover,
@@ -38,12 +38,12 @@
             overflow: hidden;
             outline: none;
             z-index: 1;
-            transition: all .3s ease-in-out;
+            @include ma-transition(all, .3s);
             &:after {
                 content: '';
                 @include add-overlay();
                 @include linear-gradient-bg();
-                transition: all .3s ease-in-out;
+                @include ma-transition(all, .3s);
                 width: 101%;
                 z-index: 2;
                 opacity: 0;
@@ -67,7 +67,7 @@
                 }
             }
             img {
-                transition: all .3s ease-in-out;
+                @include ma-transition(all, .3s);
                 width: 400px;
                 height: 250px;
                 min-width: 100%;
@@ -77,7 +77,7 @@
                 display: block;
                 text-decoration: none;
                 font-size: 1.25rem;
-                transition: all .3s ease-in-out;
+                @include ma-transition(all, .3s);
             }
             span {
                 font-size: .85rem;
@@ -91,12 +91,12 @@
                 margin: 0;
                 opacity: 0;
                 z-index: 5;
-                transition: all .3s ease-in-out;
+                @include ma-transition(all, .3s);
                 &>span {
-                    color: $ma-white-color;
+                    @include solid-color-text($ma-white-color);
                 }
                 &>.info-link {
-                    color: $ma-white-color;
+                    @include solid-color-text($ma-white-color);
                     &:hover {
                         transform: scale(1.025);
                         font-weight: $font-w-bold;

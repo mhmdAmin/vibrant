@@ -14,12 +14,12 @@
         opacity: .85;
     }
     .play-btn {
-        @include linear-gradient-bg();
         border-radius: 50%;
         padding: 5px;
         cursor: pointer;
-        transition: transform .5s ease-in-out;
         animation: ma-pulse infinite 2s linear;
+        @include linear-gradient-bg();
+        @include ma-transition();
         &:hover {
             transform: scale(1.05);
         }

@@ -1,4 +1,4 @@
-/*==========================  START TESTMOIALS SECTION  ==========================*/
+/*=======  START TESTMOIALS SECTION  =======*/
 
 .testmonials {
     .testmonial-content {
@@ -47,7 +47,7 @@
             }
         }
         .customer-testmonial {
-            @media(max-width: 991px) {
+            @include ma-md-and-under-screens {
                 padding: 0 10px;
             }
         }
@@ -62,4 +62,4 @@
     }
 }
 
-/*==========================  END TESTMOIALS SECTION  ==========================*/
+/*=======  END TESTMOIALS SECTION  =======*/

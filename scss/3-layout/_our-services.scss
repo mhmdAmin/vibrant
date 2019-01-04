@@ -1,25 +1,32 @@
 .our-services {
     .ma-service {
         padding: 5rem 0;
+        &:last-of-type {
+            padding: 0;
+        }
+        @include ma-md-and-under-screens {
+            padding: 2rem 0;
+        }
+    }
+    .ma-service-image {
+        margin-bottom: 0;
+        @include ma-md-and-under-screens {
+            margin-bottom: 2rem;
+        }
     }
     .content-block {
         position: relative;
-        @media(max-width: 991px) {
-            padding: 2rem 0; // text-align: center;
-        }
         .service-num {
             position: absolute;
-            #{$start-direction}: 70%;
-            top: -20px;
-            transform: translateX(-50%);
+            #{$end-direction}: 0;
+            #{$start-direction}: auto;
+            top: 0%;
             font-size: 10rem;
             font-weight: bold;
             opacity: .25;
             z-index: -1;
+            line-height: 75%;
             @include linear-gradient-text();
-            @media(max-width: 991px) {
-                font-size: 5rem;
-            }
         }
     }
     .icon {

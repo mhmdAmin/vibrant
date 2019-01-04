@@ -25,7 +25,7 @@
             border: 1px solid;
             border-radius: .25rem;
             margin-bottom: .4rem;
-            transition: border-color .3s ease-in-out;
+            @include ma-transition(border-color, .3s);
             border-color: rgba($ma-accent-color, .5);
             &:focus {
                 border-color: rgba($ma-accent-color, 1);
@@ -38,7 +38,7 @@
     }
     /*End user-form Rules*/
     .contact-info-card {
-        transition: all .3s ease-in-out;
+        @include ma-transition( all, .3s);
         margin-top: 1rem;
         margin-bottom: 2rem;
         padding: 1rem;

@@ -19,7 +19,7 @@
                 border-radius: 0;
                 font-weight: bold;
                 white-space: normal;
-                color: $ma-white-color;
+                @include solid-color-text($ma-white-color);
                 &::before {
                     content: "\f068";
                     display: inline-block;

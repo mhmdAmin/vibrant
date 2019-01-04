@@ -1,14 +1,14 @@
 .page-footer {
-    @include solid-color-bg($ma-grey-color);
     padding: 20px 0;
     text-align: center;
+    @include solid-color-bg($ma-grey-color);
     .footer-brand {
         text-decoration: none;
         display: inline-block;
         width: auto;
         img {
             width: 150px;
-            @media(max-width: 991px) {
+            @include ma-md-and-under-screens {
                 width: 120px;
             }
         }

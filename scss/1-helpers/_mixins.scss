@@ -27,15 +27,6 @@
     color: $text-color;
 }
 
-@mixin add-line() {
-    //this mixin makes a littel line used whatever you want to seprate content 
-    display: block;
-    width: 75px;
-    height: 4px;
-    border-radius: 0 6px;
-    margin: 1rem auto;
-}
-
 @mixin add-overlay {
     //this mixin makes an overlay layer over the elment uses it
     position: absolute;
@@ -48,5 +39,46 @@
 }
 
 @mixin ma-box-shadow($x:0, $y:0, $blur:0, $spread:0, $color:#000) {
+    // this mixin adds box-shadow with default values
     box-shadow: $x+px $y+px $blur+px $spread+px $color;
+}
+
+@mixin ma-transition($prop:all, $duration:.5s, $easefunc:ease-in-out, $delay:0s) {
+    // this mixin adds transition  with default values
+    transition: $prop $duration $easefunc $delay;
+}
+
+@mixin ma-xl-and-up-screens {
+    //media query for +1200px screens 
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin ma-lg-and-under-screens {
+    //media query form 0px to 1199px screens 
+    @media (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin ma-md-and-under-screens {
+    //media query form 0px to 991px screens
+    @media (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin ma-sm-and-under-screens {
+    //media query form 0px to 767px screens
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin ma-xs-and-under-screens {
+    //media query form 0px to 575px screens
+    @media ( max-width: 575px) {
+        @content;
+    }
 }

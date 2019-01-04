@@ -3,7 +3,7 @@
 .pricing {
     .price-plan {
         &:not(:last-of-type) {
-            @media (max-width: 991px) {
+            @include ma-md-and-under-screens {
                 margin-bottom: 3rem;
             }
         }
@@ -11,32 +11,28 @@
     .plan {
         overflow: hidden;
         border-radius: 1rem 1rem 0 0;
-        transition: all .4s ease-in-out;
+        @include ma-transition(all, .3s);
         @include ma-box-shadow(1, 3, 20, 0, $transparent-black-25);
         &:hover {
             @include ma-box-shadow(1, 3, 50, 5, $transparent-black-25);
-            .plan-cost {
-                background-position: 30% 30%;
-            }
         }
         .plan-cost {
             position: relative;
             padding-top: 2.5rem;
             padding-bottom: 1rem;
-            transition: all .4s ease-in-out;
             @include linear-gradient-bg();
             .plane-name {
-                color: $ma-white-color;
+                @include solid-color-text( $ma-white-color);
                 font-weight: $font-w-bold;
                 font-size: 1.75rem;
             }
             .plan-price {
                 font-size: 3rem;
                 font-weight: $font-w-bold;
-                color: $ma-white-color;
+                @include solid-color-text( $ma-white-color);
                 .plan-currency {
                     position: relative;
-                    color: $ma-white-color;
+                    @include solid-color-text( $ma-white-color);
                     font-size: 1.5rem;
                     font-weight: $font-w-thin;
                     top: -1rem;
@@ -51,7 +47,7 @@
                 font-size: 1rem;
                 font-weight: $font-w-medium;
                 font-style: italic;
-                color: $ma-white-color;
+                @include solid-color-text( $ma-white-color);
             }
         }
         .plan-details {
